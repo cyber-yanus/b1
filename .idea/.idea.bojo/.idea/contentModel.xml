@@ -22,6 +22,30 @@
               <e p="readme.txt" t="Include" />
             </e>
           </e>
+          <e p="Touch Controller Kit Lite" t="Include">
+            <e p="Demo Scene &amp; Assets" t="Include">
+              <e p="TouchControllerGameManager.cs" t="Include" />
+            </e>
+            <e p="ExampleImplementation.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Joystick Movement Controller" t="Include">
+                <e p="JoystickMovement.cs" t="Include" />
+              </e>
+              <e p="Swipe Controller" t="Include">
+                <e p="SwipeEvents.cs" t="Include" />
+                <e p="SwipeManager.cs" t="Include" />
+              </e>
+              <e p="Tilt Controller" t="Include">
+                <e p="TiltController.cs" t="Include" />
+              </e>
+              <e p="Visual Touch" t="Include">
+                <e p="VisualizeTouch.cs" t="Include" />
+              </e>
+              <e p="Zoom And Pan" t="Include">
+                <e p="OrthoZoomAndPan.cs" t="Include" />
+              </e>
+            </e>
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="BojoRay.cs" t="Include" />
@@ -31,6 +55,9 @@
           <e p="Hero.cs" t="Include" />
           <e p="MoveHero.cs" t="Include" />
           <e p="SizeCorrector.cs" t="Include" />
+          <e p="Touches" t="Include">
+            <e p="TouchController.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="bojo.sln" t="IncludeFlat" />

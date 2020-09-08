@@ -4,7 +4,15 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs" line="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="397c269e-34ee-4de7-995e-b79e9f8ee32d" name="Default Changelist" comment="" />
+    <list default="true" id="397c269e-34ee-4de7-995e-b79e9f8ee32d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Touches.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +23,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
@@ -58,15 +66,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/c4/a5c83277/Ray.cs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/SizeCorrector.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
@@ -98,15 +97,38 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="373">
+                  <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+                  <folding>
+                    <marker date="1599507370273" expanded="true" signature="54:1904" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="105:1902" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="173:625" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="690:1219" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="713:814" ph="/* ! Always unsubscribe to events if you have subscribed to them ... */" />
+                    <marker date="1599507370273" expanded="true" signature="1267:1316" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1352:1403" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1439:1490" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1527:1579" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1643:1698" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1747:1803" ph="{...}" />
+                    <marker date="1599507370273" expanded="true" signature="1839:1896" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="223">
-                  <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+                <state relative-caret-position="585">
+                  <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
                   <folding>
                     <marker date="1599079197767" expanded="false" signature="6:83" ph="..." />
                     <marker date="1599079197767" expanded="true" signature="112:1748" ph="{...}" />
@@ -118,6 +140,100 @@
                     <marker date="1599079197767" expanded="true" signature="925:1298" ph="{...}" />
                     <marker date="1599079197767" expanded="true" signature="1358:1534" ph="{...}" />
                     <marker date="1599079197767" expanded="true" signature="1675:1741" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+                  <folding>
+                    <marker date="1599505388768" expanded="false" signature="6:78" ph="..." />
+                    <marker date="1599505388768" expanded="true" signature="120:2773" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="127:527" ph="Fields" />
+                    <marker date="1599505388768" expanded="false" signature="533:756" ph="Unity Methods" />
+                    <marker date="1599505388768" expanded="true" signature="572:637" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="656:740" ph="{...}" />
+                    <marker date="1599505388768" expanded="false" signature="762:2771" ph="Private Methods" />
+                    <marker date="1599505388768" expanded="true" signature="863:1843" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="915:1102" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1028:1092" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1156:1349" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1272:1339" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1402:1593" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1517:1583" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1646:1837" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1761:1827" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="1982:2755" ph="{...}" />
+                    <marker date="1599505388768" expanded="false" signature="2067:2282" ph="Mouse Input Multiple Swipe Check" />
+                    <marker date="1599505388768" expanded="true" signature="2149:2170" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="2214:2263" ph="{...}" />
+                    <marker date="1599505388768" expanded="false" signature="2362:2748" ph="Mobile Input Multiple Swipe Check" />
+                    <marker date="1599505388768" expanded="true" signature="2442:2729" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="2512:2540" ph="{...}" />
+                    <marker date="1599505388768" expanded="true" signature="2658:2719" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="643">
+                  <caret line="313" selection-start-line="313" selection-end-line="313" />
+                  <folding>
+                    <marker date="1599561312173" expanded="false" signature="6:110" ph="..." />
+                    <marker date="1599561312173" expanded="true" signature="153:10940" ph="{...}" />
+                    <marker date="1599561312173" expanded="false" signature="160:2480" ph="Fields" />
+                    <marker date="1599561312173" expanded="true" signature="180:272" ph="/* Variables to be handeled by code ... */" />
+                    <marker date="1599561312173" expanded="false" signature="2486:3158" ph="Unity Methods" />
+                    <marker date="1599561312173" expanded="true" signature="2526:3142" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="2908:2948" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="2983:3053" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="3066:3136" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="3164:10938" ph="Private Methods" />
+                    <marker date="1599561312173" expanded="true" signature="3297:4595" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="3371:4588" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="3535:3795" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="3885:4174" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="4224:4577" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="4650:5701" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="4719:4933" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="4993:5236" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="5298:5695" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="5822:6033" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="6120:6686" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="6604:6679" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="6763:8183" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="6963:8176" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="6986:7090" ph="/* Swipe for four directional swipe type ... */" />
+                    <marker date="1599561312173" expanded="true" signature="7128:7613" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7229:7301" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7375:7450" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7524:7598" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7683:8166" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7783:7855" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="7928:8002" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="8077:8151" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="8301:9124" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="8432:9118" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="8631:8746" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="8835:9107" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9239:9982" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9304:9976" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9492:9719" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9578:9705" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9736:9966" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="9824:9952" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="10238:10667" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="10270:10430" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="10354:10420" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="10754:10789" ph="{...}" />
+                    <marker date="1599561312173" expanded="true" signature="10881:10922" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -149,7 +265,7 @@
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnectCheck.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="150">
-                  <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+                  <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
                   <folding>
                     <marker date="1599302441733" expanded="false" signature="6:42" ph="..." />
                     <marker date="1599302441733" expanded="true" signature="85:1933" ph="{...}" />
@@ -180,19 +296,32 @@
       </split-second>
     </splitter>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Swipe</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/435C27E5-C1E7-4381-912F-7C81A4F2D0D8/53/83fe9d3e/MoveDirection.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F8918D0C-C5FC-41A1-BABA-01B207A4C016/42/9b80a5b8/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BojoRay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ConnectCheck.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SizeCorrector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GroundCheck.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BojoRay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SizeCorrector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/50/8e36e1c0/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/c4/a5c83277/Ray.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Demo Scene &amp; Assets/TouchControllerGameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/fe/5a7b43c2/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/ExampleImplementation.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -209,43 +338,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MoveHero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ConnectCheck.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/ExampleImplementation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Demo Scene &amp; Assets/TouchControllerGameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="UnityExplorer" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="UnityExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-            </path>
-            <path>
-              <item name="Project" type="e068e287:UnityExplorerRootNode" />
-              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
-              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <option name="show-hidden-items" value="false" />
-        <option name="show-project-names" value="true" />
-      </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
@@ -308,12 +419,13 @@
       <workItem from="1599150509199" duration="1608000" />
       <workItem from="1599213933866" duration="3401000" />
       <workItem from="1599299457231" duration="3353000" />
-      <workItem from="1599498086663" duration="1245000" />
+      <workItem from="1599498086663" duration="7451000" />
+      <workItem from="1599561077329" duration="295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85210000" />
+    <option name="totallyTimeSpent" value="91711000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,7 +440,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16311301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -358,7 +470,7 @@
       <window_info anchor="right" id="Unit Tests Coverage" order="6" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15351813" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16311301" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -381,7 +493,7 @@
       <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="right" id="Errors In Solution" order="4" />
       <window_info anchor="right" id="Database" order="5" />
@@ -435,6 +547,82 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/TriggerConnector.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/SizeType.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/ExampleImplementation.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding>
+            <marker date="1599509303532" expanded="true" signature="71:2578" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="78:1868" ph="Unity Methods" />
+            <marker date="1599509303532" expanded="true" signature="430:817" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="907:1329" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="922:1008" ph="/* ! Always unsubscribe to events if you have subscribed to them ... */" />
+            <marker date="1599509303532" expanded="true" signature="1348:1852" ph="{...}" />
+            <marker date="1599509303532" expanded="false" signature="1961:2576" ph="CallBack Methods" />
+            <marker date="1599509303532" expanded="true" signature="2110:2152" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="2184:2228" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="2260:2304" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="2337:2382" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="2440:2484" ph="{...}" />
+            <marker date="1599509303532" expanded="true" signature="2516:2560" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Demo Scene &amp; Assets/TouchControllerGameManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+          <folding>
+            <marker date="1599509329271" expanded="false" signature="6:100" ph="..." />
+            <marker date="1599509329271" expanded="true" signature="157:10348" ph="{...}" />
+            <marker date="1599509329271" expanded="false" signature="164:1823" ph="Fields" />
+            <marker date="1599509329271" expanded="true" signature="1491:1535" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="1829:3588" ph="Unity Methods" />
+            <marker date="1599509329271" expanded="true" signature="1868:1990" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="2008:2474" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="2529:2865" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="2922:3332" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="2937:3034" ph="/* ! Always unsubscribe to events if you have subscribed to them ... */" />
+            <marker date="1599509329271" expanded="true" signature="3351:3572" ph="{...}" />
+            <marker date="1599509329271" expanded="false" signature="3594:7964" ph="Private Methods" />
+            <marker date="1599509329271" expanded="true" signature="3732:4481" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="3841:4351" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="3948:4076" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="4216:4341" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="4413:4475" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="4548:4795" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="4616:4789" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="4883:5253" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="5039:5247" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="5342:5806" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="5495:5575" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="5588:5661" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="5939:6152" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="6273:6496" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="6316:6396" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="6409:6490" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="6627:6890" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="6928:7104" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="7138:7583" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="7621:7948" ph="{...}" />
+            <marker date="1599509329271" expanded="false" signature="8001:8583" ph="Event Callback Functions" />
+            <marker date="1599509329271" expanded="true" signature="8081:8130" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="8162:8213" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="8245:8296" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="8329:8381" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="8433:8484" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="8516:8567" ph="{...}" />
+            <marker date="1599509329271" expanded="false" signature="8589:10345" ph="Public Functions To Drive UI" />
+            <marker date="1599509329271" expanded="true" signature="8708:10022" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="9449:10016" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="10100:10329" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="10136:10216" ph="{...}" />
+            <marker date="1599509329271" expanded="true" signature="10242:10323" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -501,6 +689,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
+          <folding>
+            <marker date="1599507370273" expanded="true" signature="54:1904" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="105:1902" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="173:625" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="690:1219" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="713:814" ph="/* ! Always unsubscribe to events if you have subscribed to them ... */" />
+            <marker date="1599507370273" expanded="true" signature="1267:1316" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1352:1403" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1439:1490" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1527:1579" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1643:1698" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1747:1803" ph="{...}" />
+            <marker date="1599507370273" expanded="true" signature="1839:1896" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+          <folding>
+            <marker date="1599079197767" expanded="false" signature="6:83" ph="..." />
+            <marker date="1599079197767" expanded="true" signature="112:1748" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="158:1640" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="493:834" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="612:688" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="747:824" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="889:1321" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="925:1298" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="1358:1534" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="1675:1741" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <marker date="1599505388768" expanded="false" signature="6:78" ph="..." />
+            <marker date="1599505388768" expanded="true" signature="120:2773" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="127:527" ph="Fields" />
+            <marker date="1599505388768" expanded="false" signature="533:756" ph="Unity Methods" />
+            <marker date="1599505388768" expanded="true" signature="572:637" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="656:740" ph="{...}" />
+            <marker date="1599505388768" expanded="false" signature="762:2771" ph="Private Methods" />
+            <marker date="1599505388768" expanded="true" signature="863:1843" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="915:1102" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1028:1092" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1156:1349" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1272:1339" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1402:1593" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1517:1583" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1646:1837" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1761:1827" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="1982:2755" ph="{...}" />
+            <marker date="1599505388768" expanded="false" signature="2067:2282" ph="Mouse Input Multiple Swipe Check" />
+            <marker date="1599505388768" expanded="true" signature="2149:2170" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="2214:2263" ph="{...}" />
+            <marker date="1599505388768" expanded="false" signature="2362:2748" ph="Mobile Input Multiple Swipe Check" />
+            <marker date="1599505388768" expanded="true" signature="2442:2729" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="2512:2540" ph="{...}" />
+            <marker date="1599505388768" expanded="true" signature="2658:2719" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Hero.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
@@ -521,17 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/c4/a5c83277/Ray.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ConnectCheck.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
             <marker date="1599302441733" expanded="false" signature="6:42" ph="..." />
             <marker date="1599302441733" expanded="true" signature="85:1933" ph="{...}" />
@@ -548,21 +802,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2E6610ED-2984-4F85-A379-24F81509FE5D/c4/a5c83277/Ray.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="345">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="313" selection-start-line="313" selection-end-line="313" />
           <folding>
-            <marker date="1599079197767" expanded="false" signature="6:83" ph="..." />
-            <marker date="1599079197767" expanded="true" signature="112:1748" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="158:1640" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="493:834" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="612:688" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="747:824" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="889:1321" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="925:1298" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="1358:1534" ph="{...}" />
-            <marker date="1599079197767" expanded="true" signature="1675:1741" ph="{...}" />
+            <marker date="1599561312173" expanded="false" signature="6:110" ph="..." />
+            <marker date="1599561312173" expanded="true" signature="153:10940" ph="{...}" />
+            <marker date="1599561312173" expanded="false" signature="160:2480" ph="Fields" />
+            <marker date="1599561312173" expanded="true" signature="180:272" ph="/* Variables to be handeled by code ... */" />
+            <marker date="1599561312173" expanded="false" signature="2486:3158" ph="Unity Methods" />
+            <marker date="1599561312173" expanded="true" signature="2526:3142" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="2908:2948" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="2983:3053" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="3066:3136" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="3164:10938" ph="Private Methods" />
+            <marker date="1599561312173" expanded="true" signature="3297:4595" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="3371:4588" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="3535:3795" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="3885:4174" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="4224:4577" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="4650:5701" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="4719:4933" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="4993:5236" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="5298:5695" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="5822:6033" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="6120:6686" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="6604:6679" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="6763:8183" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="6963:8176" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="6986:7090" ph="/* Swipe for four directional swipe type ... */" />
+            <marker date="1599561312173" expanded="true" signature="7128:7613" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7229:7301" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7375:7450" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7524:7598" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7683:8166" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7783:7855" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="7928:8002" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="8077:8151" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="8301:9124" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="8432:9118" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="8631:8746" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="8835:9107" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9239:9982" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9304:9976" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9492:9719" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9578:9705" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9736:9966" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="9824:9952" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="10238:10667" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="10270:10430" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="10354:10420" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="10754:10789" ph="{...}" />
+            <marker date="1599561312173" expanded="true" signature="10881:10922" ph="{...}" />
           </folding>
         </state>
       </provider>
