@@ -38,10 +38,10 @@ public class MoveHero : MonoBehaviour
         
         _sequence = DOTween.Sequence();
 
-        StartCoroutine(Move());
+//        StartCoroutine(Move());
         
     }
-
+/*
     IEnumerator Move()
     {
         while (true)
@@ -60,6 +60,24 @@ public class MoveHero : MonoBehaviour
             //меняем значения высоты и ширны между собой 
             _figureSize.Smena();
         }
+    }
+*/
+
+    public void Move(MoveDirection moveDirection)
+    {
+        this.moveDirection = moveDirection; 
+        
+        //определяем, какая грань дует шириной фигуры
+        _figureSize.InitCubeCount(moveDirection);
+            
+        CalculateMoveStep();
+        CalculateEndPositionForJump();
+            
+        Jump();    
+        Rotate();
+
+        //меняем значения высоты и ширны между собой 
+        _figureSize.Smena();
     }
 
     private void CalculateMoveStep()
@@ -86,7 +104,7 @@ public class MoveHero : MonoBehaviour
     private void PositionYForJump()
     {
         float groundPositionY = 2f;
-        _positionYForJump = groundPositionY + _figureSize.WidthCubeCount;//   _hero.//widthCubeCount;
+        _positionYForJump = groundPositionY + _figureSize.WidthCubeCount;
     }
    
     private void PositionZForJump()
@@ -120,4 +138,10 @@ public class MoveHero : MonoBehaviour
         _sequence.Join(transform.DORotate(newRotatePosition, _rotateDuration, RotateMode.WorldAxisAdd));
     }
 
+
+    public MoveDirection MoveDirection
+    {
+        get => moveDirection;
+        set => moveDirection = value;
+    }
 }
