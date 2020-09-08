@@ -4,6 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs" line="9" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="397c269e-34ee-4de7-995e-b79e9f8ee32d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/camera.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/camera/CameraMove.cs" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.bojo/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/SampleScene.unity" afterDir="false" />
     </list>
+=======
+    <list default="true" id="397c269e-34ee-4de7-995e-b79e9f8ee32d" name="Default Changelist" comment="" />
+>>>>>>> add_tap
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +25,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="525">
                   <caret line="63" selection-start-line="63" selection-end-line="63" />
                   <folding>
@@ -57,6 +62,26 @@
                     <marker date="1599587808916" expanded="true" signature="284:318" ph="{...}" />
                     <marker date="1599587808916" expanded="true" signature="349:389" ph="{...}" />
                     <marker date="1599587808916" expanded="true" signature="418:522" ph="{...}" />
+=======
+                <state relative-caret-position="360">
+                  <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+                  <folding>
+                    <marker date="1599587924423" expanded="false" signature="6:152" ph="..." />
+                    <marker date="1599587924423" expanded="true" signature="192:3723" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="747:981" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="982:1477" ph="/* IEnumerator Move() ... */" />
+                    <marker date="1599587924423" expanded="true" signature="1528:1914" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="1952:2016" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="2064:2160" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="2197:2445" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="2482:2604" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="2644:2882" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="2907:3131" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="3158:3600" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="3273:3352" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="3405:3480" ph="{...}" />
+                    <marker date="1599587924423" expanded="true" signature="3641:3721" ph="{...}" />
+>>>>>>> add_tap
                   </folding>
                 </state>
               </provider>
@@ -115,6 +140,7 @@
             <entry file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="718">
+<<<<<<< HEAD
                   <caret line="65" selection-start-line="65" selection-end-line="65" />
                   <folding>
                     <marker date="1599587127767" expanded="true" signature="6:19" ph="..." />
@@ -122,6 +148,15 @@
                     <marker date="1599587127767" expanded="true" signature="1791:1902" ph="{...}" />
                     <marker date="1599587127767" expanded="true" signature="1791:1904" ph="{...}" />
                     <marker date="1599587127767" expanded="true" signature="1839:1896" ph="{...}" />
+=======
+                  <caret line="70" selection-start-line="70" selection-end-line="70" />
+                  <folding>
+                    <marker date="1599587924424" expanded="true" signature="6:19" ph="..." />
+                    <marker date="1599587924424" expanded="true" signature="1982:1994" ph="{...}" />
+                    <marker date="1599587924424" expanded="true" signature="1982:2093" ph="{...}" />
+                    <marker date="1599587924424" expanded="true" signature="1982:2095" ph="{...}" />
+                    <marker date="1599587924424" expanded="true" signature="2030:2087" ph="{...}" />
+>>>>>>> add_tap
                   </folding>
                 </state>
               </provider>
@@ -249,15 +284,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SizeCorrector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FigureSize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BojoRay.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MoveHero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ConnectCheck.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/ExampleImplementation.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Demo Scene &amp; Assets/TouchControllerGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Assets/Scripts/camera/CameraMove.cs" />
+=======
+        <option value="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveHero.cs" />
+>>>>>>> add_tap
       </list>
     </option>
   </component>
@@ -369,12 +407,16 @@
       <workItem from="1599213933866" duration="3401000" />
       <workItem from="1599299457231" duration="3353000" />
       <workItem from="1599498086663" duration="7451000" />
-      <workItem from="1599561077329" duration="295000" />
+      <workItem from="1599561077329" duration="1118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="92365000" />
+=======
+    <option name="totallyTimeSpent" value="92539000" />
+>>>>>>> add_tap
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,6 +503,19 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs</url>
+          <line>62</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs" initialLine="62">
+            <startOffsets>
+              <option value="1760" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1782" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -572,6 +627,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -595,6 +651,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> add_tap
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/GroundCheck.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -638,6 +696,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="718">
@@ -671,6 +730,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> add_tap
     <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeEvents.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -753,7 +814,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Plugins/Touch Controller Kit Lite/Scripts/Swipe Controller/SwipeManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
+        <state relative-caret-position="1363">
           <caret line="313" selection-start-line="313" selection-end-line="313" />
           <folding>
             <marker date="1599561312173" expanded="false" signature="6:110" ph="..." />
@@ -808,6 +869,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/camera/CameraMove.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -818,6 +880,61 @@
             <marker date="1599587808916" expanded="true" signature="284:318" ph="{...}" />
             <marker date="1599587808916" expanded="true" signature="349:389" ph="{...}" />
             <marker date="1599587808916" expanded="true" signature="418:522" ph="{...}" />
+=======
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FigureSize.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <marker date="1599079197767" expanded="false" signature="6:83" ph="..." />
+            <marker date="1599079197767" expanded="true" signature="112:1748" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="158:1640" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="493:834" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="612:688" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="747:824" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="889:1321" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="925:1298" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="1358:1534" ph="{...}" />
+            <marker date="1599079197767" expanded="true" signature="1675:1741" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Touches/TouchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="718">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <marker date="1599587924424" expanded="true" signature="6:19" ph="..." />
+            <marker date="1599587924424" expanded="true" signature="1982:1994" ph="{...}" />
+            <marker date="1599587924424" expanded="true" signature="1982:2093" ph="{...}" />
+            <marker date="1599587924424" expanded="true" signature="1982:2095" ph="{...}" />
+            <marker date="1599587924424" expanded="true" signature="2030:2087" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveHero.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <marker date="1599587924423" expanded="false" signature="6:152" ph="..." />
+            <marker date="1599587924423" expanded="true" signature="192:3723" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="747:981" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="982:1477" ph="/* IEnumerator Move() ... */" />
+            <marker date="1599587924423" expanded="true" signature="1528:1914" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="1952:2016" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="2064:2160" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="2197:2445" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="2482:2604" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="2644:2882" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="2907:3131" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="3158:3600" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="3273:3352" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="3405:3480" ph="{...}" />
+            <marker date="1599587924423" expanded="true" signature="3641:3721" ph="{...}" />
+>>>>>>> add_tap
           </folding>
         </state>
       </provider>

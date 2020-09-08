@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace DefaultNamespace.Touches
 {
     public class TouchController : MonoBehaviour
     {
+        [SerializeField] private MoveHero _moveHero;
+        
         //Subscribe to delegates here
         void OnEnable()
         {
@@ -58,11 +61,13 @@ namespace DefaultNamespace.Touches
         private void OnSingleTapLeft()
         {
             Debug.Log("Tap left");
+            _moveHero.Move(MoveDirection.Left);
         }
         
         private void OnSingleTapRight()
         {
             Debug.Log("Tap right");
+            _moveHero.Move(MoveDirection.Right);
         }
 
         private void OnDoubleTap()

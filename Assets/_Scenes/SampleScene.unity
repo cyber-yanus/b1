@@ -366,7 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 57.211, y: -30, z: 0}
 --- !u!4 &883433546 stripped
 Transform:
@@ -531,7 +531,7 @@ Transform:
   m_Children:
   - {fileID: 883433546}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1153807478
 Rigidbody:
@@ -621,7 +621,7 @@ Transform:
   - {fileID: 1677030907}
   - {fileID: 381873011}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432390032 stripped
 GameObject:
@@ -714,7 +714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114835967758448280, guid: 32d88206803897143a7c21e30d753c31, type: 3}
       propertyPath: maxtapTime
-      value: 0.1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114835967758448280, guid: 32d88206803897143a7c21e30d753c31, type: 3}
+      propertyPath: preventClicksThroughUI
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32d88206803897143a7c21e30d753c31, type: 3}
@@ -822,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3426247dddff435c855e3282869da46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moveHero: {fileID: 1153807476}
 --- !u!4 &2047284450
 Transform:
   m_ObjectHideFlags: 0
@@ -836,7 +841,7 @@ Transform:
   - {fileID: 1615094875}
   - {fileID: 320453127}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2055840249410635814
 PrefabInstance:
