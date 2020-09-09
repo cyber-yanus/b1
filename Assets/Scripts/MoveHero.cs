@@ -13,7 +13,9 @@ public class MoveHero : MonoBehaviour
     private Rigidbody _rb;
 
     private Sequence _sequence;
-
+    private Tween _jumpTween;
+    private Tween _rotateFlip;
+    
     private FigureSize _figureSize;
     
     private float _jumpDuration = 0.5f;
@@ -26,7 +28,7 @@ public class MoveHero : MonoBehaviour
     [SerializeField] private float moveStep = 2f;
     [SerializeField] private float jumpPower = 4f;
     [SerializeField] private MoveDirection moveDirection = MoveDirection.Right;
-    
+    [SerializeField] private bool isMoved = false;
     
     
     
@@ -37,31 +39,9 @@ public class MoveHero : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         
         _sequence = DOTween.Sequence();
-
-//        StartCoroutine(Move());
         
+        //проинициализировать твины
     }
-/*
-    IEnumerator Move()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(3f);
-            
-            //определяем, какая грань дует шириной фигуры
-            _figureSize.InitCubeCount(moveDirection);
-            
-            CalculateMoveStep();
-            CalculateEndPositionForJump();
-            
-            Jump();    
-            Rotate();
-
-            //меняем значения высоты и ширны между собой 
-            _figureSize.Smena();
-        }
-    }
-*/
 
     public void Move(MoveDirection moveDirection)
     {
@@ -118,7 +98,9 @@ public class MoveHero : MonoBehaviour
     private void Jump()
     {
         Vector3 newMovePosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
-        _sequence.Join(_rb.DOJump(newMovePosition, jumpPower, 0, _jumpDuration)).SetEase(Ease.InOutFlash);
+
+        _jumpTween = _rb.DOJump(newMovePosition, jumpPower, 0, _jumpDuration);
+        _sequence.Join(_jumpTween).SetEase(Ease.InOutFlash);
 
     }
 
@@ -134,14 +116,23 @@ public class MoveHero : MonoBehaviour
         {
             newRotatePosition = new Vector3(0, 0, 90);
         }
-        
-        _sequence.Join(transform.DORotate(newRotatePosition, _rotateDuration, RotateMode.WorldAxisAdd));
+
+        _rotateFlip = transform.DORotate(newRotatePosition, _rotateDuration, RotateMode.WorldAxisAdd);
+        _sequence.Join(_rotateFlip);
     }
 
-
+    private void Update()
+    {
+        if (_jumpTween !=null)
+            isMoved = _jumpTween.IsPlaying();
+    }
+    
+    
+    
     public MoveDirection MoveDirection
     {
         get => moveDirection;
         set => moveDirection = value;
     }
+    public bool IsMoved => isMoved;
 }
