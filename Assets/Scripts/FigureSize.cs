@@ -51,17 +51,37 @@ namespace DefaultNamespace
             
         }
         
-        public void Smena()
+        public void Smena(MoveDirection moveDirection)
         {
             int saveFigureCount = widthCubeCount;
             
-            widthCubeCount = heightCubeCount;
-            heightCubeCount = saveFigureCount;
+            if (moveDirection == MoveDirection.Left)
+            {
+                leftWidthSide = widthCubeCount = heightSide;
+            }
+            else if (moveDirection == MoveDirection.Right)
+            {
+                rightWidthSide = widthCubeCount = heightSide;
+            }
+            
+            heightSide = heightCubeCount = saveFigureCount;
         }
 
 
         public int WidthCubeCount => widthCubeCount;
+//        public int HeightSide => heightSide;
+        public int HeightCubeCount => heightCubeCount;
+
+
         public int HeightSide => heightSide;
+        public int LeftWidthSide => leftWidthSide;
+        public int RightWidthSide => rightWidthSide;
+
+//        public int GetMaxSize()
+//        {
+//            return Mathf.Max(heightCubeCount, widthCubeCount);
+//        }
+
     }
     
     

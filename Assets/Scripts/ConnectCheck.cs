@@ -41,7 +41,7 @@ public class ConnectCheck : MonoBehaviour
 
     private void CalculateRayDistance()
     {
-        float innerDistance = 1f;
+        float innerDistance = 0.5f;
         _rayDistance += innerDistance;
     }
 
