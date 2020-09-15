@@ -13,6 +13,7 @@ namespace DefaultNamespace
         private PivotCorrector _pivotCorrector;
         private GroundCheck _groundCheck;
         private FigureSize _figureSize;
+        private MoveHero _moveHero;
         
         private int _connectCheck;
         
@@ -24,6 +25,7 @@ namespace DefaultNamespace
             _pivotCorrector = GetComponent<PivotCorrector>();
             _groundCheck = GetComponent<GroundCheck>();
             _figureSize = GetComponent<FigureSize>();
+            _moveHero = GetComponent<MoveHero>();
         }
        
 
@@ -54,6 +56,14 @@ namespace DefaultNamespace
             _pivotCorrector.CorrectPivotPosition(connectDirection);            
         }
 
+        public void SetPositionForHeight()
+        {
+            float x = _moveHero.PositionXForJump1;
+            float y = _moveHero.PositionYForJump1 + 1f;
+            float z = _moveHero.PositionZForJump1;
+
+            transform.position = new Vector3(x, y, z);
+        }
 
     }
     

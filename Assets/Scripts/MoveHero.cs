@@ -64,8 +64,11 @@ public class MoveHero : MonoBehaviour
 
     private void CalculateMoveStep()
     {
-        float ground = 0.5f;
-        moveStep = _figureSize.GetMaxSize() / 2f + ground;
+        float halfHeight = _figureSize.HeightCubeCount / 2f;
+        float halfWidth = _figureSize.WidthCubeCount / 2f;
+
+        moveStep = halfWidth + halfHeight;
+
     }
 
     private void CalculateEndPositionForJump()
@@ -126,8 +129,11 @@ public class MoveHero : MonoBehaviour
 
     private void Update()
     {
-        if (_jumpTween !=null)
+        if (_jumpTween != null)
+        {
             isMoved = _jumpTween.IsPlaying();
+        }
+       
     }
     
     
@@ -139,4 +145,10 @@ public class MoveHero : MonoBehaviour
         set => moveDirection = value;
     }
     public bool IsMoved => isMoved;
+
+
+    public float PositionXForJump1 => _positionXForJump;
+    public float PositionYForJump1 => _positionYForJump;
+    public float PositionZForJump1 => _positionZForJump;
+    
 }

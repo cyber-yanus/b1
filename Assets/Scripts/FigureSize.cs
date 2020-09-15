@@ -66,12 +66,7 @@ namespace DefaultNamespace
 
 
         public int WidthCubeCount => widthCubeCount;
-
-        public int GetMaxSize()
-        {
-            return Mathf.Max(heightCubeCount, widthCubeCount);
-        }
-
+        public int HeightCubeCount => heightCubeCount;
     }
     
     
