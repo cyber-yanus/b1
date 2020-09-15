@@ -7,16 +7,14 @@ namespace DefaultNamespace
 {
     public class FigureSize : MonoBehaviour
     {
-        
         [SerializeField]private int heightSide = 1;
         [SerializeField]private int rightWidthSide = 1;
         [SerializeField]private int leftWidthSide = 1;
         
-        private int widthCubeCount;
-        private int heightCubeCount;
+        private int widthCubeCount = 1;
+        private int heightCubeCount = 1;
 
         
-
 
         public void InitCubeCount(MoveDirection moveDirection)
         {
@@ -32,23 +30,22 @@ namespace DefaultNamespace
             }
         }
 
-        public void AddEllementToArray(SideType side)
+        public void AddEllementToArray(ConnectSide connectSide)
         {
-            switch (side)
+            switch (connectSide)
             {
-                case SideType.Height:
+                case ConnectSide.Height:
                     heightSide++;
                     break;
                 
-                case SideType.LeftWidth:
+                case ConnectSide.LeftWidth:
                     leftWidthSide++;
                     break;
                 
-                case SideType.RightWidth:
+                case ConnectSide.RightWidth:
                     rightWidthSide++;
                     break;
             }
-            
         }
         
         public void Smena(MoveDirection moveDirection)
@@ -69,23 +66,16 @@ namespace DefaultNamespace
 
 
         public int WidthCubeCount => widthCubeCount;
-//        public int HeightSide => heightSide;
-        public int HeightCubeCount => heightCubeCount;
 
-
-        public int HeightSide => heightSide;
-        public int LeftWidthSide => leftWidthSide;
-        public int RightWidthSide => rightWidthSide;
-
-//        public int GetMaxSize()
-//        {
-//            return Mathf.Max(heightCubeCount, widthCubeCount);
-//        }
+        public int GetMaxSize()
+        {
+            return Mathf.Max(heightCubeCount, widthCubeCount);
+        }
 
     }
     
     
-    public enum SideType
+    public enum ConnectSide
     {
         Height,
         LeftWidth,

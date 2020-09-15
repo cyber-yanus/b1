@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using DefaultNamespace;
 using DG.Tweening;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -12,22 +13,24 @@ public class MoveHero : MonoBehaviour
 
     private Sequence _sequence;
     private Tween _jumpTween;
-    private Tween _rotateFlip;
+    private Tween _rotateTween;
     
     private FigureSize _figureSize;
     
     private float _jumpDuration = 0.5f;
     private float _rotateDuration = 0.25f;
-    
+  
+    private float _positionXForJump;
     private float _positionYForJump;
     private float _positionZForJump;
-    private float _positionXForJump;
+  
+    
+    
     
     [SerializeField] private bool isMoved;
-    [SerializeField] private float moveStep = 2f;
+    [SerializeField] private float moveStep;
     [SerializeField] private float jumpPower = 4f;
     [SerializeField] private MoveDirection moveDirection = MoveDirection.Right;
-    [SerializeField] private Transform pivot;
     
     
     
@@ -37,8 +40,6 @@ public class MoveHero : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         
         _sequence = DOTween.Sequence();
-        
-        //проинициализировать твины
     }
 
     public void Move(MoveDirection moveDirection)
@@ -63,7 +64,8 @@ public class MoveHero : MonoBehaviour
 
     private void CalculateMoveStep()
     {
-        moveStep = _figureSize.HeightSide;
+        float ground = 0.5f;
+        moveStep = _figureSize.GetMaxSize() / 2f + ground;
     }
 
     private void CalculateEndPositionForJump()
@@ -84,17 +86,8 @@ public class MoveHero : MonoBehaviour
 
     private void PositionYForJump()
     {
-        float groundPositionY = 1f;
-            
-        if (_figureSize.WidthCubeCount % 2 == 0)
-        {
-            _positionYForJump = groundPositionY + _figureSize.WidthCubeCount + 1;
-        }
-        else
-        {
-            _positionYForJump = groundPositionY + _figureSize.WidthCubeCount;    
-        }
-        
+        float ground = 0.5f;
+        _positionYForJump = ground + _figureSize.WidthCubeCount / 2f;    
     }
    
     private void PositionZForJump()
@@ -107,42 +100,36 @@ public class MoveHero : MonoBehaviour
 
     private void Jump()
     {
-        Vector3 newMovePosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
+        Vector3 endPosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
 
-        _jumpTween = _rb.DOJump(newMovePosition, jumpPower, 0, _jumpDuration);
-        _sequence.Join(_jumpTween).SetEase(Ease.InOutFlash);
-
+        _jumpTween =_rb.DOJump(endPosition, jumpPower, 0, _jumpDuration).SetEase(Ease.InOutFlash);
+        _sequence.Join(_jumpTween);
     }
 
     private void Rotate()
     {
-//        Vector3 newRotatePosition = Vector3.zero;
-//        
-//        if (moveDirection == MoveDirection.Right)
-//        {
-//            newRotatePosition = new Vector3(90, 0, 0);    
-//        }
-//        else if(moveDirection == MoveDirection.Left)
-//        {
-//            newRotatePosition = new Vector3(0, 0, 90);
-//        }
-//
-//        _rotateFlip = transform.DORotate(newRotatePosition, _rotateDuration, RotateMode.WorldAxisAdd);
-//        _sequence.Join(_rotateFlip);
+        Vector3 endPosition = Vector3.zero;
 
         
+        if (moveDirection == MoveDirection.Right)
+        {
+            endPosition = new Vector3(90, 0, 0);    
+        }
+        else if(moveDirection == MoveDirection.Left)
+        {
+            endPosition = new Vector3(0, 0, 90);
+        }
         
-
+        _rotateTween = _rb.DORotate(endPosition, _rotateDuration, RotateMode.WorldAxisAdd);
+        _sequence.Join(_rotateTween);
     }
 
     private void Update()
     {
         if (_jumpTween !=null)
             isMoved = _jumpTween.IsPlaying();
-        
-        
-        transform.RotateAround(pivot.position, Vector3.right, 90f * Time.deltaTime);
     }
+    
     
     
     

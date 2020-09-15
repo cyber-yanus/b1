@@ -1,76 +1,59 @@
-using DG.Tweening;
+using Cubes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DefaultNamespace
 {
     public class Hero : MonoBehaviour
     {
-        [SerializeField]private ConnectCheck connectCheck;
+        public UnityEvent connectCheckEvent;
         
+        
+        private PivotCorrector _pivotCorrector;
         private GroundCheck _groundCheck;
         private FigureSize _figureSize;
+        
+        private int _connectCheck;
+        
 
-        private int _permission;
         
         
         private void Awake()
         {
+            _pivotCorrector = GetComponent<PivotCorrector>();
             _groundCheck = GetComponent<GroundCheck>();
             _figureSize = GetComponent<FigureSize>();
         }
-
-
        
 
         private void Update()
         {
             bool isGrounded = _groundCheck.isGrounded;
 
+            //connectCheckEvent.Invoke();
+            
+            
             if (!isGrounded)
             {
-                _permission = 0;
+                _connectCheck = 0;
             }
-        }
-
-
-        private void FixedPosition(Transform trans)
-        {
-            DOTween.KillAll();
-            
-            float newPositionX = trans.position.x;
-            float newPositionY = transform.position.y;
-            float newPositionZ = trans.position.z;
-            
-            transform.position = new Vector3(newPositionX, newPositionY, newPositionZ);
-
-            trans.parent = transform.parent;
-        }
-
-        public void ConnectCube(Transform cubeTransform, SideType sideConnect)
-        {
-            
-            bool isGrounded = _groundCheck.isGrounded;
-
-            if (sideConnect == SideType.LeftWidth || sideConnect == SideType.RightWidth)
+            else
             {
-                //в дальнейшем заменить permission на другое 
-                if (isGrounded && _permission == 0)
+                if (_connectCheck == 0)
                 {
-                    _permission++;
-                    cubeTransform.parent = transform;
-                    cubeTransform.GetComponent<ConnectCheck>().enabled = false;
-
-                    _figureSize.AddEllementToArray(sideConnect);
+                    connectCheckEvent.Invoke();
+                    _connectCheck++;
                 }
             }
-            else if (sideConnect == SideType.Height)
-            {
-                cubeTransform.parent = transform;
-                cubeTransform.GetComponent<ConnectCheck>().enabled = false;
+            
+        }
 
-                _figureSize.AddEllementToArray(sideConnect);
-            }
 
+        public void ConnectActions(ConnectSide connectSideConnect, Vector3 connectDirection)
+        {
+            
+            _figureSize.AddEllementToArray(connectSideConnect);
+            _pivotCorrector.CorrectPivotPosition(connectDirection);            
         }
 
 

@@ -1,32 +1,38 @@
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
     public class PivotCorrector : MonoBehaviour
     {
-        private FigureSize _figureSize;
-        private float step;
+        private Transform _children;
+        
+        private float _step;
         
         private void Start()
         {
-            _figureSize = GetComponentInParent<FigureSize>();
-             step = transform.parent.transform.localScale.x / 2;
-        }
-
-
-        private void Update()
-        {
-            correctPivotPosition();
-        }
-
-
-        private void correctPivotPosition()
-        {
-            float pivotPositionX = (_figureSize.LeftWidthSide - 1) * step;
-            float pivotPositionY = (_figureSize.HeightSide - 1) * step;
-            float pivotPositionZ = (_figureSize.RightWidthSide - 1) * step;
+            _children = transform.GetChild(0);
             
-            transform.localPosition = new Vector3(pivotPositionX, pivotPositionY, pivotPositionZ);
+            _step = transform.localScale.x / 2;
+        }
+
+
+        public void CorrectPivotPosition(Vector3 connectDirection)
+        {
+//            if (connectDirection == Vector3.up)
+//            {
+//                connectDirection = Vector3.down;
+//            }
+//            else if (connectDirection == Vector3.down)
+//            {
+//                connectDirection = Vector3.up;
+//            }
+
+
+            Vector3 pivotPosition = connectDirection * _step;
+
+            _children.position += pivotPosition;
+            transform.position -= pivotPosition;
         }
     }
 }

@@ -48,11 +48,14 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BojoRay.cs" t="Include" />
           <e p="camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
-          <e p="ConnectCheck.cs" t="Include" />
+          <e p="Cube" t="Include">
+            <e p="Cube.cs" t="Include" />
+            <e p="CubeRays.cs" t="Include" />
+            <e p="CubesCheck.cs" t="Include" />
+          </e>
           <e p="FigureSize.cs" t="Include" />
           <e p="GroundCheck.cs" t="Include" />
           <e p="Hero.cs" t="Include" />

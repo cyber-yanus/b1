@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -5,28 +6,45 @@ namespace DefaultNamespace
     public class GroundCheck : MonoBehaviour
     {
         public bool isGrounded;
+        public bool isEnterCube;
         
         
         private void OnCollisionEnter(Collision other)
         {
-            if (other.transform.tag.Equals("ground"))
+            string tag = other.transform.tag;
+
+            switch (tag)
             {
-                Debug.Log("enter ground");
-                isGrounded = true;
+                case "ground":
+                    Debug.Log("enter ground");
+                    isGrounded = true;
+                     break;
+                
+//                case "cube":
+//                    Debug.Log("enter cube");
+//                    isEnterCube = true;
+//                    break;
             }
-            
         }
 
         
         
         private void OnCollisionExit(Collision other)
         {
-            if (other.transform.tag.Equals("ground"))
-            {
-                Debug.Log("exit ground");
-                isGrounded = false;
-            }
+            string tag = other.transform.tag;
             
+            switch (tag)
+            {
+                case "ground":
+                    Debug.Log("exit ground");
+                    isGrounded = false;
+                    break;    
+                
+//                case "cube":
+//                    Debug.Log("exit cube");
+//                    isEnterCube = false;
+//                    break;
+            }
         }
         
         
