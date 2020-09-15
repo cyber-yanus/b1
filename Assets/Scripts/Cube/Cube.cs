@@ -17,16 +17,11 @@ namespace Cubes
         
         public void Connects()
         {
-           // if (_cubeRays.Rays == null) return;
-           
-            
-            
             int connectCount = 0;
-            
             Hero hero = default;
             Vector3 rayDirection = Vector3.zero;
-            ConnectSide connectSide;
-                
+            
+            
             foreach (var ray in _cubeRays.Rays)
             {
                 if (Physics.Raycast(ray, out var hit, _cubeRays.RayDistance))
@@ -48,6 +43,7 @@ namespace Cubes
                 }
             }
 
+            
             if (connectCount == 1)
             {
                 if (hero != null) 

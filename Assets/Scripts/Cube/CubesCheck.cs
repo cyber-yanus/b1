@@ -6,8 +6,6 @@ namespace DefaultNamespace
 {
     public class CubesCheck : MonoBehaviour
     {
-        [SerializeField] private Hero hero;
-
         private List<Cube> _cubes;
         
         
@@ -17,7 +15,8 @@ namespace DefaultNamespace
             _cubes = new List<Cube>();
         }
 
-
+        
+        
         public void CheckConnects()
         {
             InitializationCubes();
@@ -31,14 +30,8 @@ namespace DefaultNamespace
 
         private void InitializationCubes()
         {
-            if (_cubes == null)
-            {
-                _cubes = new List<Cube>();    
-            }
-            else
-            {
-                _cubes.Clear();
-            }
+            //посмотреть тип без повторений 
+            _cubes.Clear();
             
             int cubesCount = transform.GetChildCount();
             for (int i = 0; i < cubesCount; i++)
@@ -51,8 +44,7 @@ namespace DefaultNamespace
                                                                 
             }
         }
-        
-        
 
+        
     }
 }

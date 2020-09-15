@@ -48,7 +48,7 @@ namespace DefaultNamespace.Touches
             }
         }
 
-
+        
         public List<Ray> Rays => _rays;
         public float RayDistance => _rayDistance;
     }

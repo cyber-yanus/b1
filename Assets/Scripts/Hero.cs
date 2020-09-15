@@ -1,4 +1,5 @@
 using Cubes;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,7 @@ namespace DefaultNamespace
         private FigureSize _figureSize;
         
         private int _connectCheck;
+        private bool _isGrounded;
         
 
         
@@ -28,15 +30,13 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            bool isGrounded = _groundCheck.isGrounded;
-
-            //connectCheckEvent.Invoke();
-            
-            
-            if (!isGrounded)
+            _isGrounded = _groundCheck.isEnterGround;
+           
+            if (!_isGrounded)
             {
                 _connectCheck = 0;
             }
+            
             else
             {
                 if (_connectCheck == 0)
@@ -45,14 +45,13 @@ namespace DefaultNamespace
                     _connectCheck++;
                 }
             }
-            
+ 
         }
 
 
-        public void ConnectActions(ConnectSide connectSideConnect, Vector3 connectDirection)
+        public void ConnectActions(ConnectSide connectSide, Vector3 connectDirection)
         {
-            
-            _figureSize.AddEllementToArray(connectSideConnect);
+            _figureSize.AddEllementToArray(connectSide);
             _pivotCorrector.CorrectPivotPosition(connectDirection);            
         }
 
