@@ -102,7 +102,7 @@ public class MoveHero : MonoBehaviour
     {
         Vector3 endPosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
 
-        _jumpTween =_rb.DOJump(endPosition, jumpPower, 0, _jumpDuration).SetEase(Ease.InOutFlash);
+        _jumpTween = transform.DOJump(endPosition, jumpPower, 0, _jumpDuration).SetEase(Ease.InOutFlash);
         _sequence.Join(_jumpTween);
     }
 
@@ -120,7 +120,7 @@ public class MoveHero : MonoBehaviour
             endPosition = new Vector3(0, 0, 90);
         }
         
-        _rotateTween = _rb.DORotate(endPosition, _rotateDuration, RotateMode.WorldAxisAdd);
+        _rotateTween = transform.DORotate(endPosition, _rotateDuration, RotateMode.WorldAxisAdd);
         _sequence.Join(_rotateTween);
     }
 

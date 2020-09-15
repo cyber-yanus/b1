@@ -15,7 +15,6 @@ namespace DefaultNamespace
         private FigureSize _figureSize;
         
         private int _connectCheck;
-        private bool _isGrounded;
         
 
         
@@ -30,9 +29,9 @@ namespace DefaultNamespace
 
         private void Update()
         {
-            _isGrounded = _groundCheck.isEnterGround;
+            bool isGrounded = _groundCheck.isEnterGround;
            
-            if (!_isGrounded)
+            if (!isGrounded)
             {
                 _connectCheck = 0;
             }
