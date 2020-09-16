@@ -22,7 +22,7 @@ namespace DefaultNamespace.camera
 
         private void Update()
         {
-         //   MoveForward();
+            MoveForward();
             MoveToTarget();
         }
 

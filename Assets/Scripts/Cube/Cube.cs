@@ -36,14 +36,12 @@ namespace Cubes
                         hero = hit.transform.GetComponent<Hero>();
                         rayDirection = ray.direction;
                         connectSide = SelectSideType(rayDirection);
-                        
-                        if (connectSide == ConnectSide.Height)
+
+                        if (connectCount <= 1)
                         {
-                            hero.SetPositionForHeight();
+                            Transform parent = hit.transform.GetChild(0);
+                            transform.parent = parent;
                         }
-                        
-                        Transform parent = hit.transform.GetChild(0);
-                        transform.parent = parent;
                         
                         transform.GetComponent<Cube>().enabled = false;
                     }
@@ -53,11 +51,20 @@ namespace Cubes
             
             if (connectCount == 1)
             {
-                if (hero != null) 
-                    hero.ConnectActions(connectSide, rayDirection);
+                if (hero != null)
+                {
+                    if (connectSide == ConnectSide.Height)
+                        hero.SetPositionForHeight();
+                    
+                    hero.ConnectActions(transform, connectSide, rayDirection);
+                            
+                }
             }
             
+            
         }
+
+        
         
         private ConnectSide SelectSideType(Vector3 direction)
         {

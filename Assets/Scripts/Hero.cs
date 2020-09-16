@@ -50,8 +50,14 @@ namespace DefaultNamespace
         }
 
 
-        public void ConnectActions(ConnectSide connectSide, Vector3 connectDirection)
+        public void ConnectActions(Transform cube, ConnectSide connectSide, Vector3 connectDirection)
         {
+            Transform parent = transform.GetChild(0);
+            cube.transform.parent = parent;
+            
+            Vector3 cubePos = cube.position;
+            cube.position = new Vector3(Mathf.Round(cubePos.x), Mathf.Round(cubePos.y), Mathf.Round(cubePos.z));
+            
             _figureSize.AddEllementToArray(connectSide);
             _pivotCorrector.CorrectPivotPosition(connectDirection);            
         }

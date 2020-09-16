@@ -7,6 +7,14 @@ namespace DefaultNamespace
     public class GroundCheck : MonoBehaviour
     {
         public bool isEnterGround;
+        private Hero _hero;
+
+
+        private void Start()
+        {
+            _hero = GetComponent<Hero>();
+        }
+
 
         private void OnTriggerEnter(Collider other)
         {
@@ -16,13 +24,12 @@ namespace DefaultNamespace
             {
                 Debug.Log("enter ground");
                 isEnterGround = true;
-            }
-
-            if (tag.Equals("up cube"))
+            }else if (tag.Equals("up cube"))
             {
                 Debug.Log("up cube enter");
                 isEnterGround = true;
                 DOTween.KillAll();
+                //_hero.SetPositionForHeight();
             }
         }
 
@@ -35,6 +42,14 @@ namespace DefaultNamespace
                 Debug.Log("exit ground");
                 isEnterGround = false;
             }
+            else if (tag.Equals("up cube"))
+            {
+                Debug.Log("up cube exit");
+                isEnterGround = false;
+            }
+            
+
+           
         }
         
     }
