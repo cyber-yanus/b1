@@ -19,16 +19,6 @@ namespace DefaultNamespace
 
         public void CorrectPivotPosition(Vector3 connectDirection)
         {
-//            if (connectDirection == Vector3.up)
-//            {
-//                connectDirection = Vector3.down;
-//            }
-//            else if (connectDirection == Vector3.down)
-//            {
-//                connectDirection = Vector3.up;
-//            }
-
-
             Vector3 pivotPosition = connectDirection * _step;
 
             _children.position += pivotPosition;

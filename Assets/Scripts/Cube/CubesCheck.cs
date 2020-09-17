@@ -33,7 +33,7 @@ namespace DefaultNamespace
             //посмотреть тип без повторений 
             _cubes.Clear();
             
-            int cubesCount = transform.GetChildCount();
+            int cubesCount = transform.childCount;
             for (int i = 0; i < cubesCount; i++)
             {
                 Cube cube = transform.GetChild(i).GetComponent<Cube>();

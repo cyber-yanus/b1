@@ -29,7 +29,6 @@ namespace DefaultNamespace
                 Debug.Log("up cube enter");
                 isEnterGround = true;
                 DOTween.KillAll();
-                //_hero.SetPositionForHeight();
             }
         }
 

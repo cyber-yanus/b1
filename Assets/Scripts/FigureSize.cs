@@ -64,7 +64,7 @@ namespace DefaultNamespace
             heightSide = heightCubeCount = saveFigureCount;
         }
 
-
+        
         public int WidthCubeCount => widthCubeCount;
         public int HeightCubeCount => heightCubeCount;
     }
