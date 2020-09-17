@@ -36,8 +36,10 @@ namespace Cubes
                     {
                         Debug.Log("connect with player");
 
+                        connectCount++;
+                        
                         hits = Physics.RaycastAll(ray);
-                        size = hits.Length;
+                        size = hits.Length + 1;
                         foreach (var hitus in hits)
                         {
                             var name = hitus.collider.name;
@@ -46,17 +48,16 @@ namespace Cubes
                                 size -= 2;
                             }    
                         }
-                        Debug.Log("Size = " + size + 1);
+                        Debug.Log("Size = " + size);
 
-//                        hitName = hit.collider.name;
-                        connectCount++;
+
 
                         hero = hit.transform.GetComponent<Hero>();
                         rayDirection = ray.direction;
                         connectSide = SelectSideType(rayDirection);
                         maxSize = hero.GetSideLength(connectSide);
 
-                        if (size+1 >= maxSize)
+                        if (size > maxSize)
                         {
                             if (connectSide == ConnectSide.Height)
                                 hero.SetPositionForHeight();
@@ -76,61 +77,7 @@ namespace Cubes
                 }
             }
 
-            
-//             if (connectCount == 1)
-//             {
-//                bool write = false;
-//                var name = "";
-//                foreach (var ray in _cubeRays.DiagonalRays)
-//                {
-//                    if (Physics.Raycast(ray, out var hit, _cubeRays.DiagonalRayDistance))
-//                    {
-//                        if (hit.transform.tag.Equals("Player"))
-//                        {
-//                            Debug.Log("connect with player");
-//
-//                            if (!write)
-//                            {
-//                                name = hit.collider.name;    
-//                            }
-//                            
-//                            if (!hitName.Equals(name))
-//                            {
-//                                connectCount++;    
-//                            }
-//
-//                            write = true;
-//
-//
-//                            /*
-//                            hero = hit.transform.GetComponent<Hero>();
-//                            rayDirection = ray.direction;
-//                            connectSide = SelectSideType(rayDirection);
-//
-//                            if (connectCount <= 1)
-//                            {
-//                                Transform parent = hit.transform.GetChild(0);
-//                                transform.parent = parent;
-//                            }
-//                        
-//                            transform.GetComponent<Cube>().enabled = false;
-//                            */
-//                        }
-//                    }
-//                }                 
-//            }            
-            
-//            if (connectCount == 1)
-//            {                
-//                if (hero != null)
-//                {
-//                    if (connectSide == ConnectSide.Height)
-//                        hero.SetPositionForHeight();
-//                    
-//                    hero.ConnectActions(transform, connectSide, rayDirection);
-//                            
-//                }
-//            }
+           
         }
 
         private void Update()
