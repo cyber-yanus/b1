@@ -57,6 +57,9 @@
             <e p="CubesCheck.cs" t="Include" />
           </e>
           <e p="FigureSize.cs" t="Include" />
+          <e p="Ground" t="Include">
+            <e p="RotateTrigger.cs" t="Include" />
+          </e>
           <e p="GroundCheck.cs" t="Include" />
           <e p="Hero.cs" t="Include" />
           <e p="MoveHero.cs" t="Include" />

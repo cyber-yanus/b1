@@ -17,7 +17,7 @@ public class MoveHero : MonoBehaviour
     
     private FigureSize _figureSize;
     
-    private float _jumpDuration = 0.5f;
+    private float _jumpDuration = 0.25f;
     private float _rotateDuration = 0.25f;
   
     private float _positionXForJump;
@@ -89,7 +89,7 @@ public class MoveHero : MonoBehaviour
 
     private void PositionYForJump()
     {
-        float ground = 0.5f;
+        float ground = 2.5f;
         _positionYForJump = ground + _figureSize.WidthCubeCount / 2f;    
     }
    
