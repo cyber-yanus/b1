@@ -74,11 +74,17 @@ namespace DefaultNamespace
         {
             if (side == ConnectSide.Height)
             {
-                return _figureSize.HeightCubeCount;
+                return _figureSize.HeightSide;
             }
-            else if(side == ConnectSide.LeftWidth || side == ConnectSide.RightWidth)
+            
+            if(side == ConnectSide.LeftWidth)
             {
-                return _figureSize.WidthCubeCount;
+                return _figureSize.LeftWidthSide;
+            }
+
+            if (side == ConnectSide.RightWidth)
+            {
+                return _figureSize.RightWidthSide;
             }
 
             return 0;

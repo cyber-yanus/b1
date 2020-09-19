@@ -67,6 +67,10 @@ namespace DefaultNamespace
         
         public int WidthCubeCount => widthCubeCount;
         public int HeightCubeCount => heightCubeCount;
+
+        public int HeightSide => heightSide;
+        public int LeftWidthSide => leftWidthSide;
+        public int RightWidthSide => rightWidthSide;
     }
     
     
