@@ -48,6 +48,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Border.cs" t="Include" />
           <e p="camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
@@ -56,20 +57,19 @@
             <e p="CubeRays.cs" t="Include" />
             <e p="CubesCheck.cs" t="Include" />
           </e>
-          <e p="FigureSize.cs" t="Include" />
-          <e p="Ground" t="Include">
-            <e p="CurrentRotate.cs" t="Include" />
-            <e p="Ground.cs" t="Include" />
-            <e p="RotateDirection.cs" t="Include" />
-            <e p="RotateTrigger.cs" t="Include" />
+          <e p="Hero" t="Include">
+            <e p="FigureSize.cs" t="Include" />
+            <e p="GroundCheck.cs" t="Include" />
+            <e p="Hero.cs" t="Include" />
+            <e p="MoveHero.cs" t="Include" />
+            <e p="SizeCorrector.cs" t="Include" />
           </e>
-          <e p="GroundCheck.cs" t="Include" />
-          <e p="Hero.cs" t="Include" />
-          <e p="MoveHero.cs" t="Include" />
           <e p="Pivot" t="Include">
             <e p="PivotCorrector.cs" t="Include" />
           </e>
-          <e p="SizeCorrector.cs" t="Include" />
+          <e p="Swipe" t="Include">
+            <e p="SwipeManager.cs" t="Include" />
+          </e>
           <e p="Touches" t="Include">
             <e p="TouchController.cs" t="Include" />
           </e>

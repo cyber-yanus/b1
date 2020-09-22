@@ -9,8 +9,6 @@ using UnityEngine.Serialization;
 
 public class MoveHero : MonoBehaviour
 {
-    private Rigidbody _rb;
-
     private Sequence _sequence;
     private Tween _jumpTween;
     private Tween _rotateTween;
@@ -30,26 +28,25 @@ public class MoveHero : MonoBehaviour
     [SerializeField] private bool isMoved;
     [SerializeField] private float moveStep;
     [SerializeField] private float jumpPower = 4f;
-    [SerializeField] private MoveDirection moveDirection = MoveDirection.Right;
+    [SerializeField] private Swipes moveDirection;// = MoveDirection.Right;
     
     
     
     void Start()
     {
         _figureSize = GetComponent<FigureSize>();
-        _rb = GetComponent<Rigidbody>();
         
         _sequence = DOTween.Sequence();
     }
 
-    public void Move(MoveDirection moveDirection)
+    public void Move(Swipes swipeDirection)
     {
         if (!isMoved)
         {
-            this.moveDirection = moveDirection;
+            moveDirection = swipeDirection;
 
             //определяем, какая грань дует шириной фигуры
-            _figureSize.InitCubeCount(moveDirection);
+            _figureSize.InitCubeCount(swipeDirection);
 
             CalculateMoveStep();
             CalculateEndPositionForJump();
@@ -58,7 +55,7 @@ public class MoveHero : MonoBehaviour
             Rotate();
 
             //меняем значения высоты и ширны между собой 
-            _figureSize.Smena(moveDirection);
+            _figureSize.Smena(swipeDirection);
         }
     }
 
@@ -79,25 +76,29 @@ public class MoveHero : MonoBehaviour
     }
 
     private void PositionXForJump()
-    {
-        if (moveDirection == MoveDirection.Right)
-            _positionXForJump = transform.position.x;    
-        else if(moveDirection == MoveDirection.Left)
+    {    
+         if(moveDirection == Swipes.TopLeft)
             _positionXForJump = transform.position.x  - moveStep;
+         else if(moveDirection == Swipes.BottomRight)
+            _positionXForJump = transform.position.x  + moveStep;
+         else 
+             _positionXForJump = transform.position.x;
         
     }
 
     private void PositionYForJump()
     {
-        float ground = 2.5f;
+        float ground = 0.5f;
         _positionYForJump = ground + _figureSize.WidthCubeCount / 2f;    
     }
    
     private void PositionZForJump()
     {
-        if (moveDirection == MoveDirection.Right)
-            _positionZForJump = transform.position.z + moveStep;    
-        else if(moveDirection == MoveDirection.Left)
+        if (moveDirection == Swipes.TopRight)
+            _positionZForJump = transform.position.z + moveStep;
+        else if(moveDirection == Swipes.BottomLeft)
+            _positionZForJump = transform.position.z - moveStep;
+        else 
             _positionZForJump = transform.position.z;
     }
 
@@ -113,14 +114,23 @@ public class MoveHero : MonoBehaviour
     {
         Vector3 endPosition = Vector3.zero;
 
-        
-        if (moveDirection == MoveDirection.Right)
+        switch (moveDirection)
         {
-            endPosition = new Vector3(90, 0, 0);    
-        }
-        else if(moveDirection == MoveDirection.Left)
-        {
-            endPosition = new Vector3(0, 0, 90);
+            case Swipes.TopRight:
+                endPosition = new Vector3(90, 0, 0);
+                break;
+                
+            case Swipes.TopLeft:
+                endPosition = new Vector3(0, 0, 90);
+                break;
+            
+            case Swipes.BottomLeft:
+                endPosition = new Vector3(-90, 0, 0);
+                break;
+            
+            case Swipes.BottomRight:
+                endPosition = new Vector3(0, 0, -90);
+                break;
         }
         
         _rotateTween = transform.DORotate(endPosition, _rotateDuration, RotateMode.WorldAxisAdd);
@@ -139,7 +149,7 @@ public class MoveHero : MonoBehaviour
     
     
     
-    public MoveDirection MoveDirection
+    public Swipes MoveDirection
     {
         get => moveDirection;
         set => moveDirection = value;

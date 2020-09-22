@@ -16,9 +16,9 @@ namespace DefaultNamespace.Touches
             SwipeEvents.OnSwipeLeft += OnSwipeLeft;
             SwipeEvents.OnSwipeRight += OnSwipeRight;
             
-            SwipeManager.OnSingleTapLeft += OnSingleTapLeft;
-            SwipeManager.OnSingleTapRight += OnSingleTapRight;
-            SwipeManager.OnDoubleTap += OnDoubleTap;
+//            SwipeManager.OnSingleTapLeft += OnSingleTapLeft;
+//            SwipeManager.OnSingleTapRight += OnSingleTapRight;
+//            SwipeManager.OnDoubleTap += OnDoubleTap;
         }
 
         //Unubscribe to delegates here
@@ -31,9 +31,9 @@ namespace DefaultNamespace.Touches
             SwipeEvents.OnSwipeLeft -= OnSwipeLeft;
             SwipeEvents.OnSwipeRight -= OnSwipeRight;
             
-            SwipeManager.OnSingleTapLeft -= OnSingleTapLeft;
-            SwipeManager.OnSingleTapLeft -= OnSingleTapRight;
-            SwipeManager.OnDoubleTap -= OnDoubleTap;
+//            SwipeManager.OnSingleTapLeft -= OnSingleTapLeft;
+//            SwipeManager.OnSingleTapLeft -= OnSingleTapRight;
+//            SwipeManager.OnDoubleTap -= OnDoubleTap;
         }
      
         
@@ -61,13 +61,21 @@ namespace DefaultNamespace.Touches
         private void OnSingleTapLeft()
         {
             Debug.Log("Tap left");
-            _moveHero.Move(MoveDirection.Left);
+            if (_moveHero)
+            {
+                //_moveHero.Move(MoveDirection.Left);    
+            }
+            
         }
         
         private void OnSingleTapRight()
         {
             Debug.Log("Tap right");
-            _moveHero.Move(MoveDirection.Right);
+            if (_moveHero) 
+            {
+                //_moveHero.Move(MoveDirection.Right);    
+            }
+            
         }
 
         private void OnDoubleTap()

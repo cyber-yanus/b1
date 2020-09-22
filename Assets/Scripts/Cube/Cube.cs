@@ -19,14 +19,15 @@ namespace Cubes
         public void Connects()
         {
             int connectCount = 0;
-            int size = 0;
+            int size;
             int maxSize;
-            //string hitName = default;
-            Hero hero = default;
-            RaycastHit[] hits;
-            ConnectSide connectSide = default;
-            Vector3 rayDirection = Vector3.zero;
             
+            Hero hero;
+            RaycastHit[] hits;
+            ConnectSide connectSide;
+            Vector3 rayDirection = Vector3.zero;
+
+            //_cubeRays.InitializationRays();
             
             foreach (var ray in _cubeRays.DirectRays)
             {
@@ -46,6 +47,7 @@ namespace Cubes
                             if (name.Equals("Cube"))
                             {
                                 size -= 2;
+                                break;    
                             }    
                         }
                         Debug.Log("Size = " + size);
@@ -78,6 +80,11 @@ namespace Cubes
             }
 
            
+        }
+
+        private void FixedUpdate()
+        {
+            _cubeRays.InitializationRays();
         }
 
         private void Update()

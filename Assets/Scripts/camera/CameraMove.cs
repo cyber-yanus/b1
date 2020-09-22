@@ -33,22 +33,48 @@ namespace DefaultNamespace.camera
 
         private void MoveToTarget()
         {
-            MoveDirection currentDirection = target.MoveDirection;
+            Swipes currentDirection = target.MoveDirection;
 
             if (target.IsMoved)
             {
-                if (currentDirection == MoveDirection.Right)
+                float newPositionX;
+                float newPositionZ;
+                
+                switch (currentDirection)
                 {
-                    //Z +
-                    float newPositionZ = _targetTransform.position.z - _differenceDistance.y;
-                    transform.DOMoveZ(newPositionZ, 1f);
+                    case Swipes.TopRight:
+                        newPositionZ = _targetTransform.position.z - _differenceDistance.y;
+                        transform.DOMoveZ(newPositionZ, 1f);
+                        break;
+                    
+                    case Swipes.BottomRight:
+                        newPositionZ = _targetTransform.position.x + _differenceDistance.x;
+                        transform.DOMoveX(newPositionZ, 1f);
+                        break;
+                    
+                    case Swipes.TopLeft:
+                        newPositionX = _targetTransform.position.x + _differenceDistance.x;
+                        transform.DOMoveX(newPositionX, 1f);
+                        break;
+                    
+                    case Swipes.BottomLeft:
+                        newPositionX = _targetTransform.position.z - _differenceDistance.y;
+                        transform.DOMoveZ(newPositionX, 1f);
+                        break;
                 }
-                else if (currentDirection == MoveDirection.Left)
-                {
-                    //X -
-                    float newPositionX = _targetTransform.position.x + _differenceDistance.x;
-                    transform.DOMoveX(newPositionX, 1f);
-                }
+                
+//                if (currentDirection == Swipes.TopRight || currentDirection == Swipes.BottomRight)
+//                {
+//                    //Z +
+//                    float newPositionZ = _targetTransform.position.z - _differenceDistance.y;
+//                    transform.DOMoveZ(newPositionZ, 1f);
+//                }
+//                else if (currentDirection == Swipes.TopLeft || currentDirection == Swipes.BottomLeft)
+//                {
+//                    //X -
+//                    float newPositionX = _targetTransform.position.x + _differenceDistance.x;
+//                    transform.DOMoveX(newPositionX, 1f);
+//                }
             }
         }
         

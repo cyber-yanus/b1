@@ -16,15 +16,15 @@ namespace DefaultNamespace
 
         
 
-        public void InitCubeCount(MoveDirection moveDirection)
+        public void InitCubeCount(Swipes swipeDirection)
         {
             heightCubeCount = heightSide; 
             
-            if (moveDirection == MoveDirection.Left)
+            if (swipeDirection == Swipes.TopLeft || swipeDirection == Swipes.BottomRight)
             {
                 widthCubeCount = leftWidthSide;
             }
-            else if (moveDirection == MoveDirection.Right)
+            else if (swipeDirection == Swipes.TopRight || swipeDirection == Swipes.BottomLeft)
             {
                 widthCubeCount = rightWidthSide;
             }
@@ -48,15 +48,15 @@ namespace DefaultNamespace
             }
         }
         
-        public void Smena(MoveDirection moveDirection)
+        public void Smena(Swipes swipeDirection)
         {
             int saveFigureCount = widthCubeCount;
             
-            if (moveDirection == MoveDirection.Left)
+            if (swipeDirection == Swipes.TopLeft || swipeDirection == Swipes.BottomRight)
             {
                 leftWidthSide = widthCubeCount = heightSide;
             }
-            else if (moveDirection == MoveDirection.Right)
+            else if (swipeDirection == Swipes.TopRight || swipeDirection == Swipes.BottomLeft)
             {
                 rightWidthSide = widthCubeCount = heightSide;
             }

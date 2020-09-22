@@ -8,23 +8,20 @@ namespace DefaultNamespace.Touches
         private Transform _cube;
         private List<Ray> _directRays;
         
-        
         private float _rayDistance;
-        
-        
         
 
         public CubeRays(Transform cube)
         {
             _cube = cube;
-            _rayDistance = 0.001f;
+            _rayDistance = 0.01f;
             
             
             CalculateRayDistance();
             InitializationRays();
         }
 
-        private void InitializationRays()
+        public void InitializationRays()
         {
             Vector3 origin = _cube.position;
             _directRays = new List<Ray>

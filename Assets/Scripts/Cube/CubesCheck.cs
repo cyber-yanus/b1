@@ -15,8 +15,7 @@ namespace DefaultNamespace
             _cubes = new List<Cube>();
         }
 
-        
-        
+  
         public void CheckConnects()
         {
             InitializationCubes();
