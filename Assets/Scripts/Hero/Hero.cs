@@ -1,3 +1,4 @@
+using System;
 using Cubes;
 using DG.Tweening;
 using UnityEngine;
@@ -7,6 +8,8 @@ namespace DefaultNamespace
 {
     public class Hero : MonoBehaviour
     {
+        [SerializeField] private Transform membrane;
+        
         public UnityEvent connectCheckEvent;
         
         
@@ -14,6 +17,7 @@ namespace DefaultNamespace
         private GroundCheck _groundCheck;
         private FigureSize _figureSize;
         private MoveHero _moveHero;
+        
         
         private int _connectCheck;
         
@@ -51,12 +55,6 @@ namespace DefaultNamespace
 
         public void ConnectActions(Transform cube, ConnectSide connectSide, Vector3 connectDirection)
         {
-           
-            Vector3 cubePos = cube.position;
-            cube.position = new Vector3(Mathf.Round(cubePos.x), Mathf.Round(cubePos.y), Mathf.Round(cubePos.z));
-            //cube.rotation = Quaternion.Euler(0, 0, 0);
-            
-            
             _figureSize.AddEllementToArray(connectSide);
             _pivotCorrector.CorrectPivotPosition(connectDirection);            
         }
@@ -67,7 +65,7 @@ namespace DefaultNamespace
             float y = _moveHero.PositionYForJump1 + 1f;
             float z = _moveHero.PositionZForJump1;
 
-            transform.position = new Vector3(x, y, z);
+            transform.localPosition = new Vector3(x, y, z);
         }
 
         public int GetSideLength(ConnectSide side)

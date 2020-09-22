@@ -524,7 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMoved: 0
   moveStep: 2
-  jumpPower: 1
+  jumpPower: 3
   moveDirection: 2
 --- !u!114 &248325200
 MonoBehaviour:
@@ -553,6 +553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e14e6671720f496fbaf50e51ef8d78a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  membrane: {fileID: 1153807477}
   connectCheckEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1464,6 +1465,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1286017813}
     m_Modifications:
+    - target: {fileID: 1141793532201470123, guid: ca9480018c4a1b94d9f5ce6260bfe5fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1777679854618584979, guid: ca9480018c4a1b94d9f5ce6260bfe5fe, type: 3}
       propertyPath: m_Enabled
       value: 1

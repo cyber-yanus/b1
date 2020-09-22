@@ -63,18 +63,6 @@ namespace DefaultNamespace.camera
                         break;
                 }
                 
-//                if (currentDirection == Swipes.TopRight || currentDirection == Swipes.BottomRight)
-//                {
-//                    //Z +
-//                    float newPositionZ = _targetTransform.position.z - _differenceDistance.y;
-//                    transform.DOMoveZ(newPositionZ, 1f);
-//                }
-//                else if (currentDirection == Swipes.TopLeft || currentDirection == Swipes.BottomLeft)
-//                {
-//                    //X -
-//                    float newPositionX = _targetTransform.position.x + _differenceDistance.x;
-//                    transform.DOMoveX(newPositionX, 1f);
-//                }
             }
         }
         

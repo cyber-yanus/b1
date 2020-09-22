@@ -28,7 +28,7 @@ public class MoveHero : MonoBehaviour
     [SerializeField] private bool isMoved;
     [SerializeField] private float moveStep;
     [SerializeField] private float jumpPower = 4f;
-    [SerializeField] private Swipes moveDirection;// = MoveDirection.Right;
+    [SerializeField] private Swipes moveDirection;
     
     
     
@@ -145,10 +145,13 @@ public class MoveHero : MonoBehaviour
         }
        
     }
-    
-    
-    
-    
+
+
+    public void removeJumpTween()
+    {
+        _jumpTween.Kill();
+    }
+
     public Swipes MoveDirection
     {
         get => moveDirection;
