@@ -31,7 +31,6 @@ namespace DefaultNamespace
             _figureSize = GetComponent<FigureSize>();
             _moveHero = GetComponent<MoveHero>();
         }
-       
 
         private void Update()
         {
@@ -41,7 +40,6 @@ namespace DefaultNamespace
             {
                 _connectCheck = 0;
             }
-            
             else
             {
                 if (_connectCheck == 0)
@@ -49,8 +47,11 @@ namespace DefaultNamespace
                     connectCheckEvent.Invoke();
                     _connectCheck++;
                 }
+                else
+                {
+                    //MembranePositionUpdate();
+                }
             }
- 
         }
 
         public void ConnectActions(Transform cube, ConnectSide connectSide, Vector3 connectDirection)
@@ -87,6 +88,53 @@ namespace DefaultNamespace
 
             return 0;
         }
+
+        public void MembranePositionUpdate()
+        {
+            Vector3 membrPosition = membrane.localPosition;
+            float x = membrPosition.x;
+            float y = membrPosition.y;
+            float z = membrPosition.z;
+            
+            if (membrPosition.x < 0)
+            {
+                x = Mathf.Abs(x);
+                x = x % 0.5f < 0.3f ? x - (x % 0.5f) : x - (x % 0.5f) + 0.5f;
+                x *= -1;
+            }
+            else
+            {
+                x = x % 0.5f < 0.3f ? x - (x % 0.5f) : x - (x % 0.5f) + 0.5f;
+            }
+
+            if (membrPosition.y < 0)
+            {
+                y = Mathf.Abs(y);
+                y = y % 0.5f < 0.3f ? y - (y % 0.5f) : y - (y % 0.5f) + 0.5f;
+                y *= -1;
+            }
+            else
+            {
+                y = y % 0.5f < 0.3f ? y - (y % 0.5f) : y - (y % 0.5f) + 0.5f;
+            }
+
+            if (membrPosition.z < 0)
+            {
+                z = Mathf.Abs(z);
+                z = z % 0.5f < 0.3f ? z - (z % 0.5f) : z - (z % 0.5f) + 0.5f;
+                z *= -1;
+            }
+            else
+            {
+                z = z % 0.5f < 0.3f ? z - (z % 0.5f) : z - (z % 0.5f) + 0.5f;
+            }
+                       
+            membrane.localPosition = new Vector3(x,y,z);
+            
+            Debug.Log("mem = " + membrane.localPosition);
+        }
+        
+        
 
     }
     

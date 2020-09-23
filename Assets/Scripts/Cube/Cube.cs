@@ -19,12 +19,12 @@ namespace Cubes
         public void Connects()
         {
             int connectCount = 0;
-            int size;
-            int maxSize;
+            int size = 0 ;
+            int maxSize = 0;
             
-            Hero hero;
             RaycastHit[] hits;
-            ConnectSide connectSide;
+            Hero hero = default;
+            ConnectSide connectSide = default;
             Vector3 rayDirection = Vector3.zero;
             
             foreach (var ray in _cubeRays.DirectRays)
@@ -47,22 +47,22 @@ namespace Cubes
                                 size -= 2;
                                 break;    
                             }    
-                        }
+                         }
                         Debug.Log("Size = " + size);
 
                         hero = hit.transform.GetComponent<Hero>();
                         rayDirection = ray.direction;
                         connectSide = SelectSideType(rayDirection);
                         maxSize = hero.GetSideLength(connectSide);
-                        
-                        if (size > maxSize)
+/*                        
+                        if (size >= maxSize)
                         {
                             if (connectSide == ConnectSide.Height)
                                 hero.SetPositionForHeight();
                     
                             hero.ConnectActions(transform, connectSide, rayDirection);
                         }
-                        
+*/                        
                         if (connectCount == 1)
                         {
                             Transform parent = hit.transform.GetChild(0);
@@ -74,12 +74,27 @@ namespace Cubes
                         }
                         
                         transform.GetComponent<Cube>().enabled = false;
-                        transform.GetChild(0).gameObject.SetActive(false);
+                        Destroy(transform.GetChild(0).gameObject); //.SetActive(false));
                     }
                 }
             }
 
-           
+            if (connectCount == 1)
+            {
+                if (size >= maxSize)
+                {
+                    if (connectSide == ConnectSide.Height)
+                        hero.SetPositionForHeight();
+
+                    hero.ConnectActions(transform, connectSide, rayDirection);
+                }
+            }
+//                Transform parent = hit.transform.GetChild(0);
+//                transform.parent = parent;
+                            
+//                Vector3 cubePos = transform.localPosition;
+//                transform.localPosition = new Vector3(Mathf.RoundToInt(cubePos.x), Mathf.RoundToInt(cubePos.y), Mathf.RoundToInt(cubePos.z));
+//                transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
         private void FixedUpdate()

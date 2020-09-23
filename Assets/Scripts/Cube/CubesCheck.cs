@@ -6,16 +6,34 @@ namespace DefaultNamespace
 {
     public class CubesCheck : MonoBehaviour
     {
+        [SerializeField] private Hero _hero;
         private List<Cube> _cubes;
-        
-        
-        
+
+
+
         private void Start()
         {
             _cubes = new List<Cube>();
         }
+        
+        private void Update()
+        {
+            CheckFreeCube();
+        }
 
-  
+        private void CheckFreeCube()
+        {
+            int freeCubeCount = transform.childCount;
+
+            if (freeCubeCount == 0)
+            {
+                Debug.Log("Что-то собрал, хуй пойми что:)");
+            }
+        }
+
+        
+        
+        
         public void CheckConnects()
         {
             InitializationCubes();
@@ -25,6 +43,7 @@ namespace DefaultNamespace
                 cube.Connects();
             }
             
+            _hero.MembranePositionUpdate();
         }
 
         private void InitializationCubes()
@@ -44,6 +63,8 @@ namespace DefaultNamespace
             }
         }
 
-        
+
+
+
     }
 }

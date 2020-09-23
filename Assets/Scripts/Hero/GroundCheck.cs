@@ -29,8 +29,11 @@ namespace DefaultNamespace
                 Debug.Log("up cube enter");
                 isEnterGround = true;   
                 _moveHero.removeJumpTween();
+                //DOTween.KillAll();
             }
         }
+
+
 
         private void OnTriggerExit(Collider other)
         {
@@ -45,10 +48,7 @@ namespace DefaultNamespace
             {
                 Debug.Log("up cube exit");
                 isEnterGround = false;
-            }
-            
-
-           
+            }           
         }
         
     }
