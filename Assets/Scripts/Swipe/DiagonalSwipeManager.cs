@@ -1,22 +1,31 @@
+using System.Collections;
 using UnityEngine;
 
 public enum Swipes { None, Up, Down, Left, TopLeft, BottomLeft, Right, TopRight,  BottomRight};
 
-public class SwipeManager : MonoBehaviour
+public class DiagonalSwipeManager : MonoBehaviour
 {
     [SerializeField] private MoveHero _moveHero;
 
     public float minSwipeLength = 200f;
+    
+    
     private Vector2 currentSwipe;
 
     private Vector2 fingerStart;
     private Vector2 fingerEnd;
 
     public static Swipes direction;
+    private static bool pause;
 
     void Update ()
     {
-        SwipeDetection();
+        if (!pause)
+        {
+            SwipeDetection();    
+        }
+        
+        Debug.Log("pause station = " + pause);
     }
 
     public void SwipeDetection ()
@@ -82,4 +91,16 @@ public class SwipeManager : MonoBehaviour
             direction = Swipes.None;  
         }
     }
+
+    public static IEnumerator PauseTimer()
+    {
+        pause = true;
+        
+        Debug.Log("STOP");
+        
+        yield return new WaitForSeconds(10f);
+
+        pause = false;
+    }
+
 }

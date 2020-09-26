@@ -26,6 +26,8 @@ public class MoveHero : MonoBehaviour
     
     
     [SerializeField] private bool isMoved;
+    [SerializeField] private bool isRotate;
+    
     [SerializeField] private float moveStep;
     [SerializeField] private float jumpPower = 4f;
     [SerializeField] private Swipes moveDirection;
@@ -41,7 +43,7 @@ public class MoveHero : MonoBehaviour
 
     public void Move(Swipes swipeDirection)
     {
-        if (!isMoved)
+        if (!isMoved && !isRotate)
         {
             moveDirection = swipeDirection;
 
@@ -139,9 +141,10 @@ public class MoveHero : MonoBehaviour
 
     private void Update()
     {
-        if (_jumpTween != null)
+        if (_jumpTween != null && _rotateTween != null)
         {
             isMoved = _jumpTween.IsPlaying();
+            isRotate = _rotateTween.IsPlaying();
         }
        
     }

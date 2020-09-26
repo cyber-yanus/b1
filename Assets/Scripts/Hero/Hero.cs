@@ -47,14 +47,10 @@ namespace DefaultNamespace
                     connectCheckEvent.Invoke();
                     _connectCheck++;
                 }
-                else
-                {
-                    //MembranePositionUpdate();
-                }
             }
         }
 
-        public void ConnectActions(Transform cube, ConnectSide connectSide, Vector3 connectDirection)
+        public void ConnectActions(ConnectSide connectSide, Vector3 connectDirection)
         {
             _figureSize.AddEllementToArray(connectSide);
             _pivotCorrector.CorrectPivotPosition(connectDirection);            
@@ -133,9 +129,6 @@ namespace DefaultNamespace
             
             Debug.Log("mem = " + membrane.localPosition);
         }
-        
-        
-
     }
     
 }

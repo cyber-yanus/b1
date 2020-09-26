@@ -26,8 +26,8 @@ namespace DefaultNamespace.Touches
             Vector3 origin = _cube.position;
             _directRays = new List<Ray>
             {
-                new Ray(origin, Vector3.up),
-                new Ray(origin, Vector3.down),
+                //new Ray(origin, Vector3.up),
+                //new Ray(origin, Vector3.down),
                 new Ray(origin, Vector3.left),
                 new Ray(origin, Vector3.right),
                 new Ray(origin, Vector3.back),

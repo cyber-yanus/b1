@@ -68,7 +68,7 @@
             <e p="PivotCorrector.cs" t="Include" />
           </e>
           <e p="Swipe" t="Include">
-            <e p="SwipeManager.cs" t="Include" />
+            <e p="DiagonalSwipeManager.cs" t="Include" />
           </e>
           <e p="Touches" t="Include">
             <e p="TouchController.cs" t="Include" />

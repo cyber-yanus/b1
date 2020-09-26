@@ -23,6 +23,7 @@ namespace DefaultNamespace
 
         private void CheckFreeCube()
         {
+            
             int freeCubeCount = transform.childCount;
 
             if (freeCubeCount == 0)
@@ -35,7 +36,7 @@ namespace DefaultNamespace
         
         
         public void CheckConnects()
-        {
+        {   
             InitializationCubes();
             
             foreach (var cube in _cubes)

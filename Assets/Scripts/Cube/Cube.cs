@@ -54,17 +54,11 @@ namespace Cubes
                         rayDirection = ray.direction;
                         connectSide = SelectSideType(rayDirection);
                         maxSize = hero.GetSideLength(connectSide);
-/*                        
-                        if (size >= maxSize)
-                        {
-                            if (connectSide == ConnectSide.Height)
-                                hero.SetPositionForHeight();
-                    
-                            hero.ConnectActions(transform, connectSide, rayDirection);
-                        }
-*/                        
+                        
                         if (connectCount == 1)
                         {
+                            StartCoroutine(DiagonalSwipeManager.PauseTimer());
+                            
                             Transform parent = hit.transform.GetChild(0);
                             transform.parent = parent;
                             
@@ -74,27 +68,21 @@ namespace Cubes
                         }
                         
                         transform.GetComponent<Cube>().enabled = false;
-                        Destroy(transform.GetChild(0).gameObject); //.SetActive(false));
+                        transform.GetChild(0).gameObject.SetActive(false);
                     }
                 }
             }
 
             if (connectCount == 1)
             {
-                if (size >= maxSize)
+                if (size > maxSize)
                 {
                     if (connectSide == ConnectSide.Height)
                         hero.SetPositionForHeight();
 
-                    hero.ConnectActions(transform, connectSide, rayDirection);
+                    hero.ConnectActions(connectSide, rayDirection);
                 }
             }
-//                Transform parent = hit.transform.GetChild(0);
-//                transform.parent = parent;
-                            
-//                Vector3 cubePos = transform.localPosition;
-//                transform.localPosition = new Vector3(Mathf.RoundToInt(cubePos.x), Mathf.RoundToInt(cubePos.y), Mathf.RoundToInt(cubePos.z));
-//                transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
 
         private void FixedUpdate()

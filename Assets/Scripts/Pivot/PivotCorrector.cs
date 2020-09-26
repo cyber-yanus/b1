@@ -6,7 +6,6 @@ namespace DefaultNamespace
     public class PivotCorrector : MonoBehaviour
     {
         private Transform _children;
-        
         private float _step;
         
         private void Start()
