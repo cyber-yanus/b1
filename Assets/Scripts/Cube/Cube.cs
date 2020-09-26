@@ -56,9 +56,7 @@ namespace Cubes
                         maxSize = hero.GetSideLength(connectSide);
                         
                         if (connectCount == 1)
-                        {
-                            StartCoroutine(DiagonalSwipeManager.PauseTimer());
-                            
+                        {   
                             Transform parent = hit.transform.GetChild(0);
                             transform.parent = parent;
                             

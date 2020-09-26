@@ -62,7 +62,6 @@
             <e p="GroundCheck.cs" t="Include" />
             <e p="Hero.cs" t="Include" />
             <e p="MoveHero.cs" t="Include" />
-            <e p="SizeCorrector.cs" t="Include" />
           </e>
           <e p="Pivot" t="Include">
             <e p="PivotCorrector.cs" t="Include" />

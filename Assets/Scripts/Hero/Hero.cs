@@ -32,7 +32,7 @@ namespace DefaultNamespace
             _moveHero = GetComponent<MoveHero>();
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             bool isGrounded = _groundCheck.isEnterGround;
            

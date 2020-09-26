@@ -35,7 +35,9 @@ public class DiagonalSwipeManager : MonoBehaviour
             fingerEnd  = Input.mousePosition;
         }
 
-        if(Input.GetMouseButton(0)) {
+        //if(Input.GetMouseButton(0)) {
+        if (Input.GetMouseButtonUp(0))
+        {
             fingerEnd = Input.mousePosition;
 
             currentSwipe = new Vector2 (fingerEnd.x - fingerStart.x, fingerEnd.y - fingerStart.y);
@@ -47,7 +49,6 @@ public class DiagonalSwipeManager : MonoBehaviour
             }
 
             float angle = (Mathf.Atan2(currentSwipe.y, currentSwipe.x) / (Mathf.PI));
-          //  Debug.Log(angle);
             // Swipe up
             if (angle>0.375f && angle<0.625f) {
                 direction = Swipes.Up;
@@ -87,18 +88,16 @@ public class DiagonalSwipeManager : MonoBehaviour
             }
         }
 
-        if(Input.GetMouseButtonUp(0)) {
-            direction = Swipes.None;  
-        }
+//        if(Input.GetMouseButtonUp(0)) {
+//            direction = Swipes.None;  
+//        }
     }
 
     public static IEnumerator PauseTimer()
     {
         pause = true;
         
-        Debug.Log("STOP");
-        
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(0.8f);
 
         pause = false;
     }
