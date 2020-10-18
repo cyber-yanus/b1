@@ -15,39 +15,29 @@ namespace DefaultNamespace
         {
             _moveHero = GetComponent<MoveHero>();
         }
-
-        private void OnTriggerEnter(Collider other)
+        
+        private void OnCollisionEnter(Collision other)
         {
-            string tag = other.transform.tag;
+            var tag = other.transform.tag;
 
             if (tag.Equals("ground"))
             {
                 Debug.Log("enter ground");
                 isEnterGround = true;
-            }else if (tag.Equals("up cube"))
-            {
-                Debug.Log("up cube enter");
-                isEnterGround = true;   
-                _moveHero.removeJumpTween();
             }
+            
         }
 
-
-
-        private void OnTriggerExit(Collider other)
+        private void OnCollisionExit(Collision other)
         {
-            string tag = other.transform.tag;
+            var tag = other.transform.tag;
 
             if (tag.Equals("ground"))
             {
                 Debug.Log("exit ground");
                 isEnterGround = false;
             }
-            else if (tag.Equals("up cube"))
-            {
-                Debug.Log("up cube exit");
-                isEnterGround = false;
-            }           
+            
         }
         
     }

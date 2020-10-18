@@ -48,7 +48,6 @@ namespace DefaultNamespace
 
         private void InitializationCubes()
         {
-            //посмотреть тип без повторений 
             _cubes.Clear();
             
             int cubesCount = transform.childCount;

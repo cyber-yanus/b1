@@ -15,15 +15,13 @@ public class MoveHero : MonoBehaviour
     
     private FigureSize _figureSize;
     
-    private float _jumpDuration = 0.25f;
-    private float _rotateDuration = 0.25f;
-  
     private float _positionXForJump;
     private float _positionYForJump;
     private float _positionZForJump;
   
     
-    
+    [SerializeField] private float jumpDuration = 0.25f;
+    [SerializeField] private float rotateDuration = 0.25f;
     
     [SerializeField] private bool isMoved;
     [SerializeField] private bool isRotate;
@@ -108,7 +106,7 @@ public class MoveHero : MonoBehaviour
     {
         Vector3 endPosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
 
-        _jumpTween = transform.DOJump(endPosition, jumpPower, 0, _jumpDuration).SetEase(Ease.InOutFlash);
+        _jumpTween = transform.DOJump(endPosition, jumpPower, 0, jumpDuration).SetEase(Ease.InOutFlash);
         _sequence.Join(_jumpTween);
     }
 
@@ -135,7 +133,7 @@ public class MoveHero : MonoBehaviour
                 break;
         }
         
-        _rotateTween = transform.DORotate(endPosition, _rotateDuration, RotateMode.WorldAxisAdd);
+        _rotateTween = transform.DORotate(endPosition, rotateDuration, RotateMode.WorldAxisAdd);
         _sequence.Join(_rotateTween);
     }
 

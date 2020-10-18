@@ -11,22 +11,22 @@ namespace DefaultNamespace
         [SerializeField]private int rightWidthSide = 1;
         [SerializeField]private int leftWidthSide = 1;
         
-        private int widthCubeCount = 1;
-        private int heightCubeCount = 1;
+        private int _widthCubeCount = 1;
+        private int _heightCubeCount = 1;
 
         
 
         public void InitCubeCount(Swipes swipeDirection)
         {
-            heightCubeCount = heightSide; 
+            _heightCubeCount = heightSide; 
             
             if (swipeDirection == Swipes.TopLeft || swipeDirection == Swipes.BottomRight)
             {
-                widthCubeCount = leftWidthSide;
+                _widthCubeCount = leftWidthSide;
             }
             else if (swipeDirection == Swipes.TopRight || swipeDirection == Swipes.BottomLeft)
             {
-                widthCubeCount = rightWidthSide;
+                _widthCubeCount = rightWidthSide;
             }
         }
 
@@ -47,26 +47,44 @@ namespace DefaultNamespace
                     break;
             }
         }
-        
+
+        public void RemoveEllementFromArray(ConnectSide connectSide)
+        {
+            switch (connectSide)
+            {
+                case ConnectSide.Height:
+                    heightSide--;
+                    break;
+                
+                case ConnectSide.LeftWidth:
+                    leftWidthSide--;
+                    break;
+                
+                case ConnectSide.RightWidth:
+                    rightWidthSide--;
+                    break;
+            }
+        }
+
         public void Smena(Swipes swipeDirection)
         {
-            int saveFigureCount = widthCubeCount;
+            int saveFigureCount = _widthCubeCount;
             
             if (swipeDirection == Swipes.TopLeft || swipeDirection == Swipes.BottomRight)
             {
-                leftWidthSide = widthCubeCount = heightSide;
+                leftWidthSide = _widthCubeCount = heightSide;
             }
             else if (swipeDirection == Swipes.TopRight || swipeDirection == Swipes.BottomLeft)
             {
-                rightWidthSide = widthCubeCount = heightSide;
+                rightWidthSide = _widthCubeCount = heightSide;
             }
             
-            heightSide = heightCubeCount = saveFigureCount;
+            heightSide = _heightCubeCount = saveFigureCount;
         }
 
         
-        public int WidthCubeCount => widthCubeCount;
-        public int HeightCubeCount => heightCubeCount;
+        public int WidthCubeCount => _widthCubeCount;
+        public int HeightCubeCount => _heightCubeCount;
 
         public int HeightSide => heightSide;
         public int LeftWidthSide => leftWidthSide;

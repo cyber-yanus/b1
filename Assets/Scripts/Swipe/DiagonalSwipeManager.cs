@@ -24,8 +24,6 @@ public class DiagonalSwipeManager : MonoBehaviour
         {
             SwipeDetection();    
         }
-        
-        Debug.Log("pause station = " + pause);
     }
 
     public void SwipeDetection ()
@@ -35,7 +33,6 @@ public class DiagonalSwipeManager : MonoBehaviour
             fingerEnd  = Input.mousePosition;
         }
 
-        //if(Input.GetMouseButton(0)) {
         if (Input.GetMouseButtonUp(0))
         {
             fingerEnd = Input.mousePosition;
@@ -88,9 +85,6 @@ public class DiagonalSwipeManager : MonoBehaviour
             }
         }
 
-//        if(Input.GetMouseButtonUp(0)) {
-//            direction = Swipes.None;  
-//        }
     }
 
     public static IEnumerator PauseTimer()

@@ -4,24 +4,21 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
+
+
 namespace DefaultNamespace
 {
     public class Hero : MonoBehaviour
     {
         [SerializeField] private Transform membrane;
         
-        public UnityEvent connectCheckEvent;
-        
-        
         private PivotCorrector _pivotCorrector;
         private GroundCheck _groundCheck;
         private FigureSize _figureSize;
         private MoveHero _moveHero;
-        
-        
         private int _connectCheck;
         
-
+        public UnityEvent connectCheckEvent;
         
         
         private void Awake()

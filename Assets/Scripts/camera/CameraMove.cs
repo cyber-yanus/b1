@@ -7,7 +7,6 @@ namespace DefaultNamespace.camera
     public class CameraMove : MonoBehaviour
     {
         [SerializeField] private MoveHero target;
-        [SerializeField] private float speed;
         
         private Vector2 _differenceDistance;
         private Transform _targetTransform;
@@ -22,15 +21,9 @@ namespace DefaultNamespace.camera
 
         private void Update()
         {
-            MoveForward();
             MoveToTarget();
         }
-
-        private void MoveForward()
-        {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
-
+        
         private void MoveToTarget()
         {
             Swipes currentDirection = target.MoveDirection;

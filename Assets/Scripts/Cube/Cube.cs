@@ -106,6 +106,6 @@ namespace Cubes
 
             return ConnectSide.Height;
         }
-     
+        
     }
 }
