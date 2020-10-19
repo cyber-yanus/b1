@@ -356,6 +356,7 @@
               <e p="StartButton.cs" t="Include" />
             </e>
           </e>
+          <e p="ColorChangeover.cs" t="Include" />
           <e p="Cube" t="Include">
             <e p="Cube.cs" t="Include" />
           </e>
@@ -367,7 +368,11 @@
           <e p="Hole" t="Include">
             <e p="HoleTrigger.cs" t="Include" />
           </e>
-          <e p="ObstacleMove.cs" t="Include" />
+          <e p="Levels.cs" t="Include" />
+          <e p="Obstacle" t="Include">
+            <e p="Obstacle.cs" t="Include" />
+            <e p="ObstacleMove.cs" t="Include" />
+          </e>
           <e p="Touches" t="Include">
             <e p="TouchController.cs" t="Include" />
           </e>

@@ -25,13 +25,13 @@ namespace DefaultNamespace.Blades
         }
 
         
-        private void Update()
-        {
-            if (!activeDestroyState)
-            {
-                StartCoroutine(ActivateDestroyState());
-            }
-        }
+//        private void Update()
+//        {
+//            if (!activeDestroyState)
+//            {
+//                StartCoroutine(ActivateDestroyState());
+//            }
+//        }
 
         
         public IEnumerator ActivateDestroyState()
@@ -63,8 +63,8 @@ namespace DefaultNamespace.Blades
             Vector3 endPosition = transform.up * 3;
             
             _preparationStateTween = transform.DOMoveY(endPosition.y, 1f)
-                .SetEase(Ease.OutQuart)
-                .OnComplete(PunchBlade);
+                .SetEase(Ease.OutQuart);
+                //.OnComplete(PunchBlade);
         }
 
         private void PunchBlade()

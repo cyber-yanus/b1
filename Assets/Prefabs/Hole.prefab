@@ -124,6 +124,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Back Plane
       objectReference: {fileID: 0}
+    - target: {fileID: 2943994490627969189, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.915
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943994490627969189, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2830615
+      objectReference: {fileID: 0}
     - target: {fileID: 3604081187362383883, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -174,7 +182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6720434087992555884, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6720434087992555884, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.28306136
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3032912223099995170, guid: b65d4cc567a7af94d9c71d37f5b6c18b, type: 3}
