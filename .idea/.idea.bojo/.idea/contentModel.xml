@@ -28,6 +28,296 @@
               <e p="readme.txt" t="Include" />
             </e>
           </e>
+          <e p="Lean" t="Include">
+            <e p="Common" t="Include">
+              <e p="Documentation" t="Include">
+                <e p="LeanGuide.cs" t="Include" />
+              </e>
+              <e p="Examples" t="Include">
+                <e p="Fonts" t="Include">
+                  <e p="OFL.txt" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="LeanLinkTo.cs" t="Include" />
+                  <e p="LeanUpgradeEventSystem.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="Alpha.shader" t="Include" />
+                  <e p="Object.shader" t="Include" />
+                  <e p="Skybox.shader" t="Include" />
+                </e>
+              </e>
+              <e p="LeanCommon.asmdef" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="LeanHelper.cs" t="Include" />
+                <e p="LeanInput.cs" t="Include" />
+                <e p="LeanInspector.cs" t="Include" />
+              </e>
+            </e>
+            <e p="READ ME.txt" t="Include" />
+            <e p="Touch" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanDestroy.cs" t="Include" />
+                  <e p="LeanDragTrail.cs" t="Include" />
+                  <e p="LeanInfoText.cs" t="Include" />
+                  <e p="LeanPulseScale.cs" t="Include" />
+                  <e p="LeanSpawn.cs" t="Include" />
+                  <e p="LeanTouchEvents.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Extras" t="Include">
+                <e p="LeanDragCamera.cs" t="Include" />
+                <e p="LeanDragTranslate.cs" t="Include" />
+                <e p="LeanFingerData.cs" t="Include" />
+                <e p="LeanFingerDown.cs" t="Include" />
+                <e p="LeanFingerFilter.cs" t="Include" />
+                <e p="LeanFingerOld.cs" t="Include" />
+                <e p="LeanFingerSwipe.cs" t="Include" />
+                <e p="LeanFingerTap.cs" t="Include" />
+                <e p="LeanFingerUp.cs" t="Include" />
+                <e p="LeanFingerUpdate.cs" t="Include" />
+                <e p="LeanPath.cs" t="Include" />
+                <e p="LeanPinchScale.cs" t="Include" />
+                <e p="LeanPlane.cs" t="Include" />
+                <e p="LeanRoll.cs" t="Include" />
+                <e p="LeanScreenDepth.cs" t="Include" />
+                <e p="LeanSelect.cs" t="Include" />
+                <e p="LeanSelectable.cs" t="Include" />
+                <e p="LeanSelectableBehaviour.cs" t="Include" />
+                <e p="LeanSelectableGraphicColor.cs" t="Include" />
+                <e p="LeanSelectableRendererColor.cs" t="Include" />
+                <e p="LeanSelectableSpriteRendererColor.cs" t="Include" />
+                <e p="LeanSelectBase.cs" t="Include" />
+                <e p="LeanSwipeBase.cs" t="Include" />
+                <e p="LeanTwistRotate.cs" t="Include" />
+                <e p="LeanTwistRotateAxis.cs" t="Include" />
+              </e>
+              <e p="LeanTouch.asmdef" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="LeanFinger.cs" t="Include" />
+                <e p="LeanGesture.cs" t="Include" />
+                <e p="LeanSnapshot.cs" t="Include" />
+                <e p="LeanTouch.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Touch+" t="Include">
+              <e p="Examples" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="LeanRandomEvents.cs" t="Include" />
+                </e>
+              </e>
+              <e p="LeanTouchPlus.asmdef" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="IDropHandler.cs" t="Include" />
+                <e p="LeanAnySelected.cs" t="Include" />
+                <e p="LeanChase.cs" t="Include" />
+                <e p="LeanChaseRigidbody.cs" t="Include" />
+                <e p="LeanChaseRigidbody2D.cs" t="Include" />
+                <e p="LeanConstrainLocalPosition.cs" t="Include" />
+                <e p="LeanConstrainScale.cs" t="Include" />
+                <e p="LeanConstrainToAxis.cs" t="Include" />
+                <e p="LeanConstrainToBox.cs" t="Include" />
+                <e p="LeanConstrainToCollider.cs" t="Include" />
+                <e p="LeanConstrainToColliders.cs" t="Include" />
+                <e p="LeanConstrainToDirection.cs" t="Include" />
+                <e p="LeanConstrainToOrthographic.cs" t="Include" />
+                <e p="LeanDragColorMesh.cs" t="Include" />
+                <e p="LeanDragDeformMesh.cs" t="Include" />
+                <e p="LeanDragLine.cs" t="Include" />
+                <e p="LeanDragSelect.cs" t="Include" />
+                <e p="LeanDragTranslateAlong.cs" t="Include" />
+                <e p="LeanDragTranslateRigidbody.cs" t="Include" />
+                <e p="LeanDragTranslateRigidbody2D.cs" t="Include" />
+                <e p="LeanDrop.cs" t="Include" />
+                <e p="LeanDropCount.cs" t="Include" />
+                <e p="LeanFingerDownCanvas.cs" t="Include" />
+                <e p="LeanFingerFlick.cs" t="Include" />
+                <e p="LeanFingerHeld.cs" t="Include" />
+                <e p="LeanFingerTapExpired.cs" t="Include" />
+                <e p="LeanFirstDown.cs" t="Include" />
+                <e p="LeanFollow.cs" t="Include" />
+                <e p="LeanGestureToggle.cs" t="Include" />
+                <e p="LeanLastUp.cs" t="Include" />
+                <e p="LeanMaintainDistance.cs" t="Include" />
+                <e p="LeanManualRotate.cs" t="Include" />
+                <e p="LeanManualSwipe.cs" t="Include" />
+                <e p="LeanManualTranslate.cs" t="Include" />
+                <e p="LeanManualTranslateRigidbody.cs" t="Include" />
+                <e p="LeanManualTranslateRigidbody2D.cs" t="Include" />
+                <e p="LeanManualVelocity.cs" t="Include" />
+                <e p="LeanManualVelocity2D.cs" t="Include" />
+                <e p="LeanMouseWheel.cs" t="Include" />
+                <e p="LeanMultiPinch.cs" t="Include" />
+                <e p="LeanMultiPull.cs" t="Include" />
+                <e p="LeanMultiSwipe.cs" t="Include" />
+                <e p="LeanMultiTap.cs" t="Include" />
+                <e p="LeanMultiTwist.cs" t="Include" />
+                <e p="LeanMultiUpdate.cs" t="Include" />
+                <e p="LeanMultiUpdateCanvas.cs" t="Include" />
+                <e p="LeanPinchCamera.cs" t="Include" />
+                <e p="LeanPitchYaw.cs" t="Include" />
+                <e p="LeanPitchYawAutoRotate.cs" t="Include" />
+                <e p="LeanPongBall.cs" t="Include" />
+                <e p="LeanReplayFinger.cs" t="Include" />
+                <e p="LeanRevertTransform.cs" t="Include" />
+                <e p="LeanRotateToPosition.cs" t="Include" />
+                <e p="LeanRotateToRigidbody2D.cs" t="Include" />
+                <e p="LeanSelectableBlock.cs" t="Include" />
+                <e p="LeanSelectableCount.cs" t="Include" />
+                <e p="LeanSelectableDial.cs" t="Include" />
+                <e p="LeanSelectableDragTorque.cs" t="Include" />
+                <e p="LeanSelectableDrop.cs" t="Include" />
+                <e p="LeanSelectablePressureScale.cs" t="Include" />
+                <e p="LeanSelectableSelected.cs" t="Include" />
+                <e p="LeanSelectableTime.cs" t="Include" />
+                <e p="LeanSelectionBox.cs" t="Include" />
+                <e p="LeanSelectSelf.cs" t="Include" />
+                <e p="LeanShape.cs" t="Include" />
+                <e p="LeanShapeDetector.cs" t="Include" />
+                <e p="LeanSpawnBetween.cs" t="Include" />
+                <e p="LeanSpawnWithFinger.cs" t="Include" />
+                <e p="LeanSwap.cs" t="Include" />
+                <e p="LeanSwipeEdge.cs" t="Include" />
+                <e p="LeanThresholdDelta.cs" t="Include" />
+                <e p="LeanThresholdPosition.cs" t="Include" />
+                <e p="LeanTwistCamera.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="NiceVibrations" t="Include">
+            <e p="Common" t="Include">
+              <e p="Plugins" t="Include">
+                <e p="Android" t="Include">
+                  <e p="AndroidManifest.xml" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="DefineSymbols" t="Include">
+                    <e p="NiceVibrationsDefineSymbols.cs" t="Include" />
+                  </e>
+                  <e p="MMNVAndroidWaveFormAssetEditor.cs" t="Include" />
+                  <e p="MMNVAssetPostProcessor.cs" t="Include" />
+                  <e p="MMNVBuildPostProcessor.cs" t="Include" />
+                  <e p="MMNVRumbleWaveFormAssetEditor.cs" t="Include" />
+                  <e p="MoreMountains.NiceVibrations.Editor.asmdef" t="Include" />
+                </e>
+                <e p="Haptics" t="Include">
+                  <e p="MMNVAHAP.cs" t="Include" />
+                  <e p="MMNVAltThread.cs" t="Include" />
+                  <e p="MMNVAndroid.cs" t="Include" />
+                  <e p="MMNVAndroidWaveFormAsset.cs" t="Include" />
+                  <e p="MMNVEnumCondition.cs" t="Include" />
+                  <e p="MMNVHapticTypes.cs" t="Include" />
+                  <e p="MMNVInspectorButton.cs" t="Include" />
+                  <e p="MMNViOS.cs" t="Include" />
+                  <e p="MMNViOSCoreHaptics.cs" t="Include" />
+                  <e p="MMNVPlatform.cs" t="Include" />
+                  <e p="MMNVRumbleWaveFormAsset.cs" t="Include" />
+                  <e p="MoreMountains.NiceVibrations.Haptics.asmdef" t="Include" />
+                </e>
+                <e p="NiceVibrations" t="Include">
+                  <e p="MMNVPath.cs" t="Include" />
+                  <e p="MMVibrationManager.cs" t="Include" />
+                  <e p="MMVibrationManagerTester.cs" t="Include" />
+                  <e p="MoreMountains.NiceVibrations.asmdef" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Demos" t="Include">
+              <e p="_Common" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="DemoManager.cs" t="Include" />
+                  <e p="NiceVibrationsDemoHelpers.cs" t="Include" />
+                  <e p="SoundSwitch.cs" t="Include" />
+                  <e p="UI" t="Include">
+                    <e p="HapticCurve.cs" t="Include" />
+                    <e p="MMFPSCounter.cs" t="Include" />
+                    <e p="MMFPSUnlock.cs" t="Include" />
+                    <e p="MMKnob.cs" t="Include" />
+                    <e p="MMProgressBar.cs" t="Include" />
+                    <e p="MMSignal.cs" t="Include" />
+                    <e p="MMSpriteReplace.cs" t="Include" />
+                    <e p="MMSwitch.cs" t="Include" />
+                    <e p="MMTouchButton.cs" t="Include" />
+                    <e p="MMUIShaker.cs" t="Include" />
+                    <e p="Pagination.cs" t="Include" />
+                  </e>
+                  <e p="V2DemoManager.cs" t="Include" />
+                  <e p="VersionNumber.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="MaskedUI.shader" t="Include" />
+                </e>
+              </e>
+              <e p="_OLD" t="Include">
+                <e p="v1Demo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="NiceVibrationsDemoManager.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="DemoAssets" t="Include">
+                <e p="AHAPPresetsDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="PresetDemoManager.cs" t="Include" />
+                    <e p="PresetDemoRotator.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="BallDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="BallDemoBall.cs" t="Include" />
+                    <e p="BallDemoManager.cs" t="Include" />
+                    <e p="BallDemoWall.cs" t="Include" />
+                    <e p="BallPusher.cs" t="Include" />
+                    <e p="BallTouchZone.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="CarDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="CarDemoManager.cs" t="Include" />
+                    <e p="PowerBarElement.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="ContinuousDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="ContinuousHapticsDemoManager.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="RegularPresetsDemo" t="Include">
+                  <e p="RegularPresetsDemoManager.cs" t="Include" />
+                </e>
+                <e p="TransientDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="TransientHapticsDemoManager.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="WobbleDemo" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="WobbleButton.cs" t="Include" />
+                    <e p="WobbleDemoManager.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="MoreMountains.NiceVibrations.Demos.asmdef" t="Include" />
+            </e>
+            <e p="license.txt" t="Include" />
+            <e p="OlderVersions" t="Include">
+              <e p="v1.7" t="Include">
+                <e p="NiceVibrations-v-1-7-readme.txt" t="Include" />
+              </e>
+              <e p="v2.0.1" t="Include">
+                <e p="NiceVibrations-v-2-0-1-readme.txt" t="Include" />
+              </e>
+            </e>
+            <e p="readme.txt" t="Include" />
+            <e p="ThirdParty" t="Include">
+              <e p="Newtonsoft" t="Include">
+                <e p="NewtonsoftJsonLicense.txt" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="Touch Controller Kit Lite" t="Include">
             <e p="Demo Scene &amp; Assets" t="Include">
               <e p="TouchControllerGameManager.cs" t="Include" />
@@ -58,7 +348,6 @@
             <e p="Blade.cs" t="Include" />
             <e p="BladeTrigger.cs" t="Include" />
           </e>
-          <e p="Border.cs" t="Include" />
           <e p="camera" t="Include">
             <e p="CameraMove.cs" t="Include" />
           </e>
@@ -69,31 +358,30 @@
           </e>
           <e p="Cube" t="Include">
             <e p="Cube.cs" t="Include" />
-            <e p="CubeRays.cs" t="Include" />
-            <e p="CubesCheck.cs" t="Include" />
           </e>
           <e p="Hero" t="Include">
-            <e p="FigureSize.cs" t="Include" />
-            <e p="GroundCheck.cs" t="Include" />
             <e p="Hero.cs" t="Include" />
+            <e p="HeroCollisionCheck.cs" t="Include" />
             <e p="MoveHero.cs" t="Include" />
           </e>
           <e p="Hole" t="Include">
             <e p="HoleTrigger.cs" t="Include" />
           </e>
-          <e p="Pivot" t="Include">
-            <e p="PivotCorrector.cs" t="Include" />
-          </e>
-          <e p="Swipe" t="Include">
-            <e p="DiagonalSwipeManager.cs" t="Include" />
-          </e>
+          <e p="ObstacleMove.cs" t="Include" />
           <e p="Touches" t="Include">
             <e p="TouchController.cs" t="Include" />
           </e>
         </e>
       </e>
       <e p="bojo.sln" t="IncludeFlat" />
+      <e p="LeanCommon.csproj" t="IncludeRecursive" />
+      <e p="LeanTouch.csproj" t="IncludeRecursive" />
+      <e p="LeanTouchPlus.csproj" t="IncludeRecursive" />
       <e p="Library" t="ExcludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.Demos.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.Editor.csproj" t="IncludeRecursive" />
+      <e p="MoreMountains.NiceVibrations.Haptics.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">

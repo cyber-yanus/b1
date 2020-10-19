@@ -1,168 +1,64 @@
-﻿using System.Collections;
-using DefaultNamespace;
-using DG.Tweening;
-using UnityEditor;
+﻿using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
 
 public class MoveHero : MonoBehaviour
 {
-    private Sequence _sequence;
-    private Tween _jumpTween;
-    private Tween _rotateTween;
+    [SerializeField] private float speed;
     
-    private FigureSize _figureSize;
+    private Rigidbody _rb;
+    private Vector3 _force;
     
-    private float _positionXForJump;
-    private float _positionYForJump;
-    private float _positionZForJump;
-  
+    public bool isMove;
     
-    [SerializeField] private float jumpDuration = 0.25f;
-    [SerializeField] private float rotateDuration = 0.25f;
-    
-    [SerializeField] private bool isMoved;
-    [SerializeField] private bool isRotate;
-    
-    [SerializeField] private float moveStep;
-    [SerializeField] private float jumpPower = 4f;
-    [SerializeField] private Swipes moveDirection;
-    
-    
-    
-    void Start()
+    private void Start()
     {
-        _figureSize = GetComponent<FigureSize>();
-        
-        _sequence = DOTween.Sequence();
+        _rb = GetComponent<Rigidbody>();
     }
 
-    public void Move(Swipes swipeDirection)
+
+    public void AddDirection(String  direction)
     {
-        if (!isMoved && !isRotate)
+
+        if (!isMove)
         {
-            moveDirection = swipeDirection;
+            isMove = true;
 
-            //определяем, какая грань дует шириной фигуры
-            _figureSize.InitCubeCount(swipeDirection);
+            switch (direction)
+            {
+                case "B":
+                    Debug.Log("Back");
+                    _force = transform.forward * -1 * speed / Time.fixedDeltaTime;
+                    break;
 
-            CalculateMoveStep();
-            CalculateEndPositionForJump();
+                case "R":
+                    Debug.Log("Right");
+                    _force = transform.right * speed / Time.fixedDeltaTime;
+                    break;
 
-            Jump();
-            Rotate();
+                case "F":
+                    Debug.Log("Forward");
+                    _force = transform.forward * speed / Time.fixedDeltaTime;
+                    break;
 
-            //меняем значения высоты и ширны между собой 
-            _figureSize.Smena(swipeDirection);
+                case "L":
+                    Debug.Log("Left");
+                    _force = transform.right * -1 * speed / Time.fixedDeltaTime;
+                    break;
+            }
         }
     }
 
-    private void CalculateMoveStep()
+    private void FixedUpdate()
     {
-        float halfHeight = _figureSize.HeightCubeCount / 2f;
-        float halfWidth = _figureSize.WidthCubeCount / 2f;
-
-        moveStep = halfWidth + halfHeight;
-
+        if(isMove)
+            Move();
     }
 
-    private void CalculateEndPositionForJump()
+    private void Move()
     {
-        PositionXForJump();
-        PositionYForJump();
-        PositionZForJump();
+        _rb.AddForce(_force);
     }
-
-    private void PositionXForJump()
-    {    
-         if(moveDirection == Swipes.TopLeft)
-            _positionXForJump = transform.position.x  - moveStep;
-         else if(moveDirection == Swipes.BottomRight)
-            _positionXForJump = transform.position.x  + moveStep;
-         else 
-             _positionXForJump = transform.position.x;
-        
-    }
-
-    private void PositionYForJump()
-    {
-        float ground = 0.5f;
-        _positionYForJump = ground + _figureSize.WidthCubeCount / 2f;    
-    }
-   
-    private void PositionZForJump()
-    {
-        if (moveDirection == Swipes.TopRight)
-            _positionZForJump = transform.position.z + moveStep;
-        else if(moveDirection == Swipes.BottomLeft)
-            _positionZForJump = transform.position.z - moveStep;
-        else 
-            _positionZForJump = transform.position.z;
-    }
-
-    private void Jump()
-    {
-        Vector3 endPosition = new Vector3(_positionXForJump, _positionYForJump, _positionZForJump);
-
-        _jumpTween = transform.DOJump(endPosition, jumpPower, 0, jumpDuration).SetEase(Ease.InOutFlash);
-        _sequence.Join(_jumpTween);
-    }
-
-    private void Rotate()
-    {
-        Vector3 endPosition = Vector3.zero;
-
-        switch (moveDirection)
-        {
-            case Swipes.TopRight:
-                endPosition = new Vector3(90, 0, 0);
-                break;
-                
-            case Swipes.TopLeft:
-                endPosition = new Vector3(0, 0, 90);
-                break;
-            
-            case Swipes.BottomLeft:
-                endPosition = new Vector3(-90, 0, 0);
-                break;
-            
-            case Swipes.BottomRight:
-                endPosition = new Vector3(0, 0, -90);
-                break;
-        }
-        
-        _rotateTween = transform.DORotate(endPosition, rotateDuration, RotateMode.WorldAxisAdd);
-        _sequence.Join(_rotateTween);
-    }
-
-    private void Update()
-    {
-        if (_jumpTween != null && _rotateTween != null)
-        {
-            isMoved = _jumpTween.IsPlaying();
-            isRotate = _rotateTween.IsPlaying();
-        }
-       
-    }
-
-
-    public void removeJumpTween()
-    {
-        _jumpTween.Kill();
-    }
-
-    public Swipes MoveDirection
-    {
-        get => moveDirection;
-        set => moveDirection = value;
-    }
-    public bool IsMoved => isMoved;
-
-
-    public float PositionXForJump1 => _positionXForJump;
-    public float PositionYForJump1 => _positionYForJump;
-    public float PositionZForJump1 => _positionZForJump;
-    
 }
+

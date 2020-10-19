@@ -1,111 +1,38 @@
-using System.Linq;
 using DefaultNamespace;
-using DefaultNamespace.Touches;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Cubes
 {
     public class Cube : MonoBehaviour
-    {
-        private CubeRays _cubeRays;
+    {   
         
-        
-        private void Start()
+        private void OnCollisionStay(Collision other)
         {
-            _cubeRays = new CubeRays(transform);
-        }
+            var tag = other.transform.tag;
 
-        
-        public void Connects()
-        {
-            int connectCount = 0;
-            int size = 0 ;
-            int maxSize = 0;
-            
-            RaycastHit[] hits;
-            Hero hero = default;
-            ConnectSide connectSide = default;
-            Vector3 rayDirection = Vector3.zero;
-            
-            foreach (var ray in _cubeRays.DirectRays)
-            {
-                if (Physics.Raycast(ray, out var hit, _cubeRays.RayDistance))
-                {
-                    if (hit.transform.tag.Equals("Player"))
-                    {
-                        Debug.Log("connect with player");
+            if (tag.Equals("Player"))
+            {       
+                transform.parent = other.transform;
+                
+                int addCubeCount = GetComponentInParent<Hero>().AddCubeCount - 1;
 
-                        connectCount++;
-                        
-                        hits = Physics.RaycastAll(ray);
-                        size = hits.Length + 1;
-                        foreach (var hitus in hits)
-                        {
-                            var name = hitus.collider.name;
-                            if (name.Equals("Cube"))
-                            {
-                                size -= 2;
-                                break;    
-                            }    
-                         }
-                        Debug.Log("Size = " + size);
-
-                        hero = hit.transform.GetComponent<Hero>();
-                        rayDirection = ray.direction;
-                        connectSide = SelectSideType(rayDirection);
-                        maxSize = hero.GetSideLength(connectSide);
-                        
-                        if (connectCount == 1)
-                        {   
-                            Transform parent = hit.transform.GetChild(0);
-                            transform.parent = parent;
-                            
-                            Vector3 cubePos = transform.localPosition;
-                            transform.localPosition = new Vector3(Mathf.RoundToInt(cubePos.x), Mathf.RoundToInt(cubePos.y), Mathf.RoundToInt(cubePos.z));
-                            transform.localRotation = Quaternion.Euler(0, 0, 0);
-                        }
-                        
-                        transform.GetComponent<Cube>().enabled = false;
-                        transform.GetChild(0).gameObject.SetActive(false);
-                    }
-                }
-            }
-
-            if (connectCount == 1)
-            {
-                if (size > maxSize)
-                {
-                    if (connectSide == ConnectSide.Height)
-                        hero.SetPositionForHeight();
-
-                    hero.ConnectActions(connectSide, rayDirection);
-                }
+                Vector3 heroPosition = other.transform.position;
+                float positionX = heroPosition.x;
+                float positionY = heroPosition.y + addCubeCount;
+                float positionZ = heroPosition.z;
+                
+                
+                Vector3 endPosition = new Vector3(positionX, positionY, positionZ);
+                
+                
+                Jump(endPosition);
             }
         }
 
-        private void FixedUpdate()
+        private void Jump(Vector3 endPosition)
         {
-            _cubeRays.InitializationRays();
+            transform.DOJump(endPosition, 1, 0, 0.25f).SetEase(Ease.Linear);
         }
-
-        private void Update()
-        {
-            _cubeRays.DrawRays();
-        }
-
-        private ConnectSide SelectSideType(Vector3 direction)
-        {
-            if (direction == Vector3.up || direction == Vector3.down)
-                return ConnectSide.Height;
-            
-            if (direction == Vector3.left || direction == Vector3.right)
-                return ConnectSide.LeftWidth;
-            
-            if (direction == Vector3.forward || direction == Vector3.back)
-                return ConnectSide.RightWidth;
-
-            return ConnectSide.Height;
-        }
-        
     }
 }
