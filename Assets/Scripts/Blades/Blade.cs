@@ -21,19 +21,11 @@ namespace DefaultNamespace.Blades
         {
             _startPosition = transform.position;
             
+            //yield return new WaitForSeconds(5f);
+            
             DefaultState();
         }
 
-        
-//        private void Update()
-//        {
-//            if (!activeDestroyState)
-//            {
-//                StartCoroutine(ActivateDestroyState());
-//            }
-//        }
-
-        
         public IEnumerator ActivateDestroyState()
         {
             float randomTime = Random.Range(5f, 10f);
@@ -41,8 +33,6 @@ namespace DefaultNamespace.Blades
             
             yield return new WaitForSeconds(randomTime);
             PreparationState();
-//            yield return new WaitForSeconds(3f);
-//            DestroyState();
         }
         
         
@@ -50,9 +40,9 @@ namespace DefaultNamespace.Blades
         {
             _destroyStateTween.Kill();
 
-            Vector3 endPosition = transform.position;
+            Vector3 endPosition = transform.localPosition;
 
-            _defaultStateTween = transform.DOJump(endPosition, 1, 0, jumpDuration)
+            _defaultStateTween = transform.DOLocalJump(endPosition, 1, 0, jumpDuration)
                 .SetLoops(-1);
         }
 
@@ -64,7 +54,6 @@ namespace DefaultNamespace.Blades
             
             _preparationStateTween = transform.DOMoveY(endPosition.y, 1f)
                 .SetEase(Ease.OutQuart);
-                //.OnComplete(PunchBlade);
         }
 
         private void PunchBlade()
@@ -74,16 +63,6 @@ namespace DefaultNamespace.Blades
             _preparationStateTween = transform.DOPunchScale(endPosition, 1f)
                 .SetLoops(2).OnComplete(AfterDestroyState);
         }
-
-//        private void DestroyState()
-//        {
-//            _preparationStateTween.Kill();
-//
-//            Vector3 bladeScale = transform.localScale * -1;
-//
-//            _destroyStateTween = transform.DOScale(bladeScale, 1f)
-//                .OnComplete(AfterDestroyState);
-//        }
 
         private void AfterDestroyState()
         {

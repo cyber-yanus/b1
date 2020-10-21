@@ -359,16 +359,23 @@
           <e p="ColorChangeover.cs" t="Include" />
           <e p="Cube" t="Include">
             <e p="Cube.cs" t="Include" />
+            <e p="CubeList.cs" t="Include" />
           </e>
+          <e p="EndLevelTrigger.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
           <e p="Hero" t="Include">
             <e p="Hero.cs" t="Include" />
             <e p="HeroCollisionCheck.cs" t="Include" />
             <e p="MoveHero.cs" t="Include" />
           </e>
           <e p="Hole" t="Include">
+            <e p="HoleLight.cs" t="Include" />
             <e p="HoleTrigger.cs" t="Include" />
           </e>
-          <e p="Levels.cs" t="Include" />
+          <e p="Level" t="Include">
+            <e p="Level.cs" t="Include" />
+            <e p="LevelList.cs" t="Include" />
+          </e>
           <e p="Obstacle" t="Include">
             <e p="Obstacle.cs" t="Include" />
             <e p="ObstacleMove.cs" t="Include" />

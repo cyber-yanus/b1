@@ -29,36 +29,38 @@ public class MoveHero : MonoBehaviour
             {
                 case "B":
                     Debug.Log("Back");
-                    _force = transform.forward * -1 * speed / Time.fixedDeltaTime;
+                    _force = transform.forward * -1 * speed;// / Time.fixedDeltaTime;
                     break;
 
                 case "R":
                     Debug.Log("Right");
-                    _force = transform.right * speed / Time.fixedDeltaTime;
+                    _force = transform.right * speed;// / Time.fixedDeltaTime;
                     break;
 
                 case "F":
                     Debug.Log("Forward");
-                    _force = transform.forward * speed / Time.fixedDeltaTime;
+                    _force = transform.forward * speed;// / Time.fixedDeltaTime;
                     break;
 
                 case "L":
                     Debug.Log("Left");
-                    _force = transform.right * -1 * speed / Time.fixedDeltaTime;
+                    _force = transform.right * -1 * speed;// / Time.fixedDeltaTime;
                     break;
             }
+            
+            Move();    
         }
     }
 
     private void FixedUpdate()
     {
-        if(isMove)
-            Move();
+//        if(isMove)
+//            Move();
     }
 
     private void Move()
     {
-        _rb.AddForce(_force);
+        _rb.AddForce(_force, ForceMode.VelocityChange);
     }
 }
 

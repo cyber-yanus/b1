@@ -6,8 +6,11 @@ namespace DefaultNamespace
 {
     public class HeroCollisionCheck : MonoBehaviour
     {
+        private Tween _punchTween;
         private MoveHero _moveHero;
         private Hero _hero;
+        
+        
         
         public bool isEnterGround;
         
@@ -32,21 +35,21 @@ namespace DefaultNamespace
                         _hero.AddColor(obstacle.color);    
                     }
                     
-                    _moveHero.isMove = false;
+                    
                     break;
                 
                 case "cube":
-                    PunchAnimation();
-                    _moveHero.isMove = false;
+                    //PunchAnimation();
                     break;
             }
             
+            _moveHero.isMove = false;
         }
 
         private void PunchAnimation()
         {
             Vector3 punch = Vector3.one / 2;
-            transform.DOPunchScale(punch, 0.25f, 1);
+            _punchTween = transform.DOPunchScale(punch, 0.25f, 1);
         }
 
 
